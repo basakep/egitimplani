@@ -24,8 +24,7 @@
             margin: 0 auto;
         }
 
-        .accordion-item,
-        .sub-accordion-item {
+        .accordion-item {
             background: #fff;
             border-radius: 8px;
             margin-bottom: 10px;
@@ -33,9 +32,16 @@
             overflow: hidden;
         }
 
-        .accordion-header,
-        .sub-accordion-header {
-            background: #2a4d69;
+        /* Sub-accordion item'lar görseldeki gibi ana başlık ile aynı hizada ve kutu görünümünde olsun diye */
+        .sub-accordion-item {
+            background: #fff;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Daha hafif bir gölge */
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: #2a4d69; /* Koyu Mavi - Ana Başlık Rengi */
             color: #fff;
             cursor: pointer;
             padding: 15px 20px;
@@ -46,11 +52,25 @@
         }
 
         .sub-accordion-header {
-            background: #3b6b8e;
+            /* Alt başlıklar, görseldeki gibi aynı koyu mavi tonda olsun */
+            background: #3b6b8e; /* Ana başlıktan biraz daha açık bir ton kullandım. Dilerseniz #2a4d69 yapabilirsiniz. */
+            color: #fff;
+            cursor: pointer;
+            padding: 15px 20px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-size: 0.95em;
         }
 
-        .accordion-content,
+        /* DDX+ Model'e ait alt başlıkların kutuları arasındaki boşluğu ayarlamak için */
+        .accordion-content {
+            display: none;
+            padding: 10px 0 0 0; /* İç dolguyu sıfırlayıp alt başlıklar arasındaki boşluğu bırakıyoruz */
+            background: #f8f9fa; /* Arka planı body rengi yaptık ki, alt başlık kutuları net ayrılsın */
+        }
+        
         .sub-accordion-content {
             display: none;
             padding: 15px 20px;
@@ -162,7 +182,7 @@
                         <ul>
                             <li>Dijital dönüşümün kavramsal çerçevesini, organizasyonlar için yarattığı değeri ve zorunluluklarını tam
                                 olarak kavrar.</li>
-                            <li>Dijital dönüşümün evrimini, küresel trendlerini ve geleceğe yönelik öngörülerini analiz eder.</li>
+                            <li>Dijital dönüşümün evrimini, küresel trendlerini ve geleceğe yönelik öngörüler.</li>
                             <li>İmalat ve Hizmet sektörlerindeki KOBİ'lerin dijital dönüşüm süreçlerinin kritik önemini ve
                                 rekabet gücüne etkilerini açıklar.</li>
                             <li>Kurumsal dijital olgunluk seviyelerini ilerletmede etkili olan iç ve dış faktörleri tespit eder ve
@@ -236,7 +256,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="sub-accordion-item">
                     <div class="sub-accordion-header">DDX Portal Eğitimi ve Raporlama Süreci <span class="arrow">▶</span></div>
                     <div class="sub-accordion-content">
@@ -274,206 +294,4 @@
                         </ul>
                         <p><strong>Kazanımlar:</strong></p>
                         <ul>
-                            <li>Sunulan vaka çalışması video kaydını izleyerek ilgili kurumun süreç ve sorunlarını tespit eder.</li>
-                            <li>Vaka analizini yönlendiren kritik soruları yorumlar ve bu sorulara cevap oluşturabilecek ön analizleri
-                                yapar.</li>
-                            <li>Kendi cevaplarını ve daha detaylı analiz için gereken ek bilgi ihtiyaçlarını profesyonel bir raporlama
-                                düzeninde sistematik olarak ifade eder.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sub-accordion-item">
-                    <div class="sub-accordion-header">Vaka Analizi Uygulama (1. Grup) <span class="arrow">▶</span></div>
-                    <div class="sub-accordion-content">
-                        <p><strong>Kapsam / İçerik:</strong></p>
-                        <ul>
-                            <li>Seçilen vakanın detaylı tanıtımı, grup çalışmasından beklenen somut çıktılar ve vaka çözüm
-                                aşamalarının anlatılması.</li>
-                            <li>Bireysel analizleri ve çözüm önerilerini destekleyecek kritik ipuçları ve yönlendirici bilgilerin
-                                katılımcılarla paylaşılması.</li>
-                            <li>Tanıtımı yapılan vaka çalışmasının belirlenen metodoloji ve zaman çizelgesine uygun olarak
-                                katılımcılar tarafından uygulanması ve çözümlenmesi.</li>
-                        </ul>
-                        <p><strong>Kazanımlar:</strong></p>
-                        <ul>
-                            <li>Sunulan vakanın temel unsurlarını, hedeflenen çıktılarını ve çözüm aşamalarını kavrar.</li>
-                            <li>Vaka çalışmasını bireysel olarak analiz ederken paylaşılan kritik ipuçlarını ve yönlendirici bilgileri
-                                etkin bir şekilde kullanır.</li>
-                            <li>Belirlenen metodolojiye ve zaman çizelgesine uyarak vaka çalışmasını başarıyla uygular ve somut çözüm
-                                önerileri geliştirir.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sub-accordion-item">
-                    <div class="sub-accordion-header">Vaka Analizi Uygulama (2. Grup) <span class="arrow">▶</span></div>
-                    <div class="sub-accordion-content">
-                        <p><strong>Kapsam / İçerik:</strong></p>
-                        <ul>
-                            <li>Seçilen vakanın detaylı tanıtımı, grup çalışmasından beklenen somut çıktıların ve çözüm aşamalarının
-                                sunulması.</li>
-                            <li>Bireysel analiz ve çözüm geliştirme çalışmalarını destekleyecek kritik ipuçları ve yönlendirici
-                                bilgilerin katılımcılarla paylaşılması.</li>
-                            <li>Tanıtımı yapılan vaka çalışmasının belirlenen metodoloji ve zaman çizelgesine uygun olarak
-                                katılımcılar tarafından uygulanması ve çözümlenmesi.</li>
-                        </ul>
-                        <p><strong>Kazanımlar:</strong></p>
-                        <ul>
-                            <li>Sunulan vakanın temel unsurlarını, hedeflenen çıktılarını ve çözüm aşamalarını kavrar.</li>
-                            <li>Vaka çalışmasını bireysel olarak analiz ederken paylaşılan kritik ipuçlarını ve yönlendirici bilgileri
-                                etkin bir şekilde kullanır.</li>
-                            <li>Belirlenen metodolojiye ve zaman çizelgesine uyarak, vaka çalışmasını başarıyla uygular ve somut çözüm
-                                önerileri geliştirir.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sub-accordion-item">
-                    <div class="sub-accordion-header">DDX Danışmanlık Hizmeti Alan / Veren Firma / Danışman Deneyim Paylaşımı
-                        <span class="arrow">▶</span>
-                    </div>
-                    <div class="sub-accordion-content">
-                        <p><strong>Kapsam / İçerik:</strong></p>
-                        <ul>
-                            <li>Firmanın sektörü, büyüklüğü, ana faaliyet alanı ve ürün/hizmet yelpazesi hakkında detaylı tanıtımı.
-                            </li>
-                            <li>Firmanın dijital dönüşüm sürecine başlama nedenleri, mevcut ihtiyaçları ve danışmanlık hizmetinden
-                                beklentileri.</li>
-                            <li>Firmanın başvuru, ön görüşmeler, veri toplama ve raporlama aşamalarını kapsayan DDX+ sürecinden geçiş
-                                deneyiminin aktarılması.</li>
-                            <li>DDX+ danışmanlığının firmaya sağladığı somut faydalar ve varsa yararlanılan ilgili teşvik/destek
-                                programları.</li>
-                            <li>Dijital olgunluk seviyesi değerlendirmesi ve yol haritası sonuçlarından firmanın edindiği kritik
-                                çıkarımlar ile gelecek dönem planlamaları.</li>
-                            <li>DDX+ danışmanlık sürecinin firma ve danışman bakış açısıyla daha verimli ve etkin geçirilmesine
-                                yönelik tavsiye ve öneriler.</li>
-                            <li>Sunum sonrası katılımcılardan gelen soruların yanıtlanması ve deneyim alışverişi.</li>
-                        </ul>
-                        <p><strong>Kazanımlar:</strong></p>
-                        <ul>
-                            <li>DDX+ danışmanlık hizmeti alan bir firmanın sektör, büyüklük ve ürün yelpazesi gibi temel profil
-                                bilgilerini edinir.</li>
-                            <li>Firmanın dijital dönüşüm ihtiyacını ve DDX+ hizmetinden beklentilerini gerçek bir örnek üzerinden
-                                analiz eder.</li>
-                            <li>Bir firmanın DDX+ başvuru, görüşme ve raporlama gibi tüm süreç adımlarını deneyim paylaşımı yoluyla
-                                öğrenir.</li>
-                            <li>DDX+ danışmanlığının firmalara sağladığı somut faydaları ve teşvik/destek mekanizmalarından yararlanma
-                                potansiyelini değerlendirir.</li>
-                            <li>Dijital olgunluk raporu ve yol haritasından yola çıkarak firmaların stratejik çıkarımlarını ve
-                                geleceğe yönelik planlarını anlar.</li>
-                            <li>DDX+ danışmanlık sürecini hem firma hem de danışman perspektifinden daha etkin yönetmeye yönelik
-                                pratik tavsiye ve öneriler geliştirir.</li>
-                            <li>Soru-cevap bölümü aracılığıyla paylaşılan deneyimler hakkında derinlemesine bilgi edinir ve
-                                öğrenilenleri pekiştirir.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sub-accordion-item">
-                    <div class="sub-accordion-header">Proje Değerleme Yöntemleri <span class="arrow">▶</span></div>
-                    <div class="sub-accordion-content">
-                        <p><strong>Kapsam / İçerik:</strong></p>
-                        <ul>
-                            <li>Proje değerlendirme sürecinin temel gereklilikleri, kriterleri ve dikkate alınması gereken unsurlar.
-                            </li>
-                            <li>Temel finansal kavramlar: Basit ve bileşik faiz hesaplama prensipleri; etkin (efektif) ve nominal faiz
-                                oranları arasındaki farklar.</li>
-                            <li>Nakit akışı modellerinde sürekli ve kesikli nakit akışlarının tanımı ve uygulama biçimleri.</li>
-                            <li>Kapsamlı Proje/Yatırım Değerleme Yöntemleri: Net Şimdiki Değer (NPV), Net Gelecek Değer (NFV), Eşit
-                                Yıllık Maliyet/Gelir (EAC/EAA), İç Verim Oranı (IRR) ve Fayda/Maliyet Oranı (BCR) gibi temel yöntemler.
-                            </li>
-                            <li>Değerleme yöntemlerinin birbirine göre karşılaştırmalı analizi; her bir yöntemin üstünlükleri ve
-                                zayıflıkları.</li>
-                        </ul>
-                        <p><strong>Kazanımlar:</strong></p>
-                        <ul>
-                            <li>Proje değerlendirme sürecinin temel gerekliliklerini, kriterlerini ve kritik unsurlarını tanımlar.
-                            </li>
-                            <li>Basit ve bileşik faiz, etkin ve nominal faiz oranları gibi temel finansal kavramları doğru şekilde
-                                hesaplar ve açıklar.</li>
-                            <li>Sürekli ve kesikli nakit akışı modellerini ayırt eder ve farklı projelerde uygulama biçimlerini analiz
-                                eder.</li>
-                            <li>Net Şimdiki Değer (NPV), İç Verim Oranı (IRR) ve Fayda/Maliyet Oranı (BCR) gibi temel proje/yatırım
-                                değerlendirme yöntemlerini uygular.</li>
-                            <li>Her bir değerlendirme yönteminin üstünlüklerini, zayıflıklarını ve hangi koşullarda daha uygun
-                                olduğunu karşılaştırmalı olarak değerlendirir.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="sub-accordion-item">
-                    <div class="sub-accordion-header">Proje Değerleme Yöntemleri (Risk ve Belirsizlik) <span class="arrow">▶</span></div>
-                    <div class="sub-accordion-content">
-                        <p><strong>Kapsam / İçerik:</strong></p>
-                        <ul>
-                            <li>Proje ve yatırım değerlendirme süreçlerinde amortisman, vergi yükümlülükleri ve enflasyonun nakit
-                                akışları üzerindeki etkilerinin analizi.</li>
-                            <li>Risk ve belirsizlik faktörlerinin finansal kararlara etkisi; duyarlılık analizi, senaryo analizi gibi
-                                risk altında karar kriterlerinin incelenmesi ve karar verme mekanizmalarının yönetimi.</li>
-                        </ul>
-                        <p><strong>Kazanımlar:</strong></p>
-                        <ul>
-                            <li>Proje ve yatırım değerlendirme süreçlerinde amortisman, vergi ve enflasyon unsurlarının nakit akışları
-                                üzerindeki etkilerini hesaplar ve analiz eder.</li>
-                            <li>Risk ve belirsizlik altında karar verme prensiplerini kavrar; duyarlılık ve senaryo analizleri gibi
-                                karar kriterlerini uygulayarak en uygun yatırım stratejisini belirler.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="sub-accordion-item">
-                    <div class="sub-accordion-header">Proje Değerleme Yöntemleri-Uygulama <span class="arrow">▶</span></div>
-                    <div class="sub-accordion-content">
-                        <p><strong>Kapsam / İçerik:</strong></p>
-                        <ul>
-                            <li>İmalat sektörüne özgü dijital dönüşüm projeleri ve yatırım kararları için detaylı değerlendirme
-                                örneklerinin incelenmesi.</li>
-                            <li>Öğrenilen finansal analiz ve proje değerleme yöntemlerinin (NPV, IRR, vb.) imalat sektörü senaryoları
-                                üzerinde pratik uygulamaları ve çözümlenmesi.</li>
-                        </ul>
-                        <p><strong>Kazanımlar:</strong></p>
-                        <ul>
-                            <li>İmalat sektörüne ait spesifik dijital dönüşüm projelerinin ve yatırım kararlarının değerlendirilmesi
-                                için gereken analitik çerçeveyi kurar.</li>
-                            <li>Öğrenilen proje değerleme yöntemlerini (NPV, IRR, vb.) kullanarak imalat sektörü senaryoları
-                                üzerindeki yatırım kararlarını pratik olarak uygular ve analiz eder.</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <div class="accordion-header">Dijital Dönüşüm Teknolojileri <span class="arrow">▶</span></div>
-            <div class="accordion-content">
-
-                <div class="sub-accordion-item">
-                    <div class="sub-accordion-header">Dijital Ekosistemler ve Platformlar 1 <span class="arrow">▶</span></div>
-                    <div class="sub-accordion-content">
-                        <p><strong>Kapsam / İçerik:</strong></p>
-                        <ul>
-                            <li>Dijital ekosistemler, platformlar ve bu alana ait temel kavram ve terminolojinin tanımlanması.</li>
-                            <li>Dijital ekosistemlerin tarihsel gelişimi, oluşum mekanizmaları ve güncel trendler (Endüstri
-                                1.0'dan 4.0'a kadar olan süreç).</li>
-                            <li>Bir dijital ekosistemi oluşturan temel unsurlar, aktörler ve aralarındaki etkileşim mekanizmaları.
-                            </li>
-                            <li>Ürün geliştirme, üretim ve iş süreçleri ekseninde dijital tedarik zinciri kavramları, uygulama
-                                araçları, altyapıları ve entegrasyon çözümleri (MES, PDM, PLM, ERP, IoT).</li>
-                            <li>Kurum içinde dijital platformların başarılı bir şekilde kurulması ve bu platformlar aracılığıyla
-                                ekosistem yönetimi stratejileri.</li>
-                            <li>Güncel dijital ekosistem uygulamalarına kapsamlı genel bakış ve tanıtım:</li>
-                            <li>-Büyük veri ve Nesnelerin İnterneti (IoT) teknolojileri.</li>
-                            <li>-Derin öğrenme, makine öğrenmesi ve yapay zekâ uygulamaları.</li>
-                            <li>-Eklemeli imalat teknolojileri.</li>
-                            <li>-Endüstriyel robotlar ve robot teknolojileri.</li>
-                            <li>-Robotik Süreç Otomasyonu (RPA) çözümleri.</li>
-                        </ul>
-                        <p><strong>Kazanımlar:</strong></p>
-                        <ul>
-                            <li>Dijital ekosistemler, platformlar ve temel kavramları doğru bir şekilde tanımlar.</li>
-                            <li>Dijital ekosistemlerin tarihsel gelişimini ve Endüstri 4.0 dahil olmak üzere güncel trendleri açıklar.
-                            </li>
-                            <li>Bir dijital ekosistemi oluşturan temel unsurları ve aktörleri analiz eder.</li>
-                            <li>Dijital tedarik zincirindeki ürün, üretim ve iş süreçleri boyutlarını, ilgili uygulama
+                            <li>Sunulan vaka çalışması video kaydını izleyerek ilgili kurumun süreç ve sorunlarını tespit eder.
