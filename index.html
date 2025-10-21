@@ -2,1376 +2,478 @@
 <html lang="tr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eğitim Planı</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f8f9fa;
-      color: #333;
-      margin: 0;
-      padding: 40px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eğitim Planı</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 40px;
+        }
 
-    h1 {
-      text-align: center;
-      color: #2a4d69;
-    }
+        h1 {
+            text-align: center;
+            color: #2a4d69;
+        }
 
-    .accordion {
-      max-width: 900px;
-      margin: 0 auto;
-    }
+        .accordion {
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-    .accordion-item,
-    .sub-accordion-item {
-      background: #fff;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
+        .accordion-item,
+        .sub-accordion-item {
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
 
-    .accordion-header,
-    .sub-accordion-header {
-      background: #2a4d69;
-      color: #fff;
-      cursor: pointer;
-      padding: 15px 20px;
-      font-weight: 600;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        .accordion-header,
+        .sub-accordion-header {
+            background: #2a4d69;
+            color: #fff;
+            cursor: pointer;
+            padding: 15px 20px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .sub-accordion-header {
-      background: #3b6b8e;
-      font-size: 0.95em;
-    }
+        .sub-accordion-header {
+            background: #3b6b8e;
+            font-size: 0.95em;
+        }
 
-    .accordion-content,
-    .sub-accordion-content {
-      display: none;
-      padding: 15px 20px;
-      background: #fff;
-    }
+        .accordion-content,
+        .sub-accordion-content {
+            display: none;
+            padding: 15px 20px;
+            background: #fff;
+        }
 
-    .open>.accordion-content,
-    .open>.sub-accordion-content {
-      display: block;
-    }
+        /* JavaScript ile eklenecek 'open' sınıfı için CSS kuralı */
+        .open>.accordion-content,
+        .open>.sub-accordion-content {
+            display: block;
+        }
 
-    .arrow {
-      transition: transform 0.3s ease;
-    }
+        .arrow {
+            transition: transform 0.3s ease;
+        }
 
-    .open>.accordion-header>.arrow,
-    .open>.sub-accordion-header>.arrow {
-      transform: rotate(90deg);
-    }
+        .open>.accordion-header>.arrow,
+        .open>.sub-accordion-header>.arrow {
+            transform: rotate(90deg);
+        }
 
-    ul {
-      margin-top: 5px;
-      padding-left: 20px;
-    }
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
 
-    strong {
-      color: #2a4d69;
-    }
-  </style>
+        strong {
+            color: #2a4d69;
+        }
+    </style>
 </head>
 
 <body>
-  <h1>📘 Eğitim Planı</h1>
-  <div class="accordion">
-    <div class="accordion-item">
-      <div class="accordion-header">DDX+ Model <span class="arrow">▶</span></div>
-      <div class="accordion-content">
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">DDX+ Süreci Bilgilendirme <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Katılımcıların eğitimi etkin kullanabilmeleri için gerekli olan katılım kuralları, eğitim
-                içeriklerinin genel akışı, başarı değerlendirme metodolojisi ve kullanılacak eğitim yöntemleri hakkında
-                kapsamlı bilgilendirme.</li>
-              <li>DDX+ modelinin sistematik tanımı, temel kapsamı, KOBİ&#x27;ler için stratejik önemi, ana bileşenleri
-                ve yönetimsel prensipleri detaylı bir şekilde incelenmesi.</li>
-              <li>DDX+ modelinin KOBİ&#x27;lerin dijitalleşme sürecine somut katkıları ve bu katkıların sağladığı
-                sürdürülebilir rekabet avantajı potansiyelinin analizi.</li>
-              <li>Danışman havuzunun oluşturulma prosedürleri, kriterleri ve genel yapısı hakkında idari bilgilendirme.
-              </li>
-              <li>DDX+ çerçevesinde danışmanlık hizmetinin başlangıcından tamamlanmasına kadar olan tüm aşamaları
-                kapsayan genel süreç ve metodoloji bilgilendirmesi.</li>
-              <li>Danışmanın sunması beklenen hizmetlerin asgari standartları, operasyonel şartları ve kalite
-                beklentileri.</li>
-              <li>Danışmanlık faaliyetinin yürütülmesi sırasında profesyonel uyum, etik ilkeler ve operasyonel başarı
-                açısından kritik öneme sahip olan kilit dikkat noktaları.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>DDX+ modelinin tanımını, temel bileşenlerini, prensiplerini ve KOBİ&#x27;lerin dijital dönüşümündeki
-                kritik rolünü tam olarak kavrar.</li>
-              <li>DDX+ modelinin KOBİ&#x27;lere sağladığı rekabet avantajını, dijitalleşmeye olan katkısını ve stratejik
-                önemini açıklar.</li>
-              <li>Danışman havuzunun oluşturulması ve danışmanlık sürecinin genel işleyişi hakkında detaylı bilgi
-                edinir.</li>
-              <li>DDX+ çerçevesinde danışman tarafından sunulması beklenen hizmet standartlarını, şartlarını ve
-                profesyonel gereklilikleri öğrenir.</li>
-              <li>Danışmanlık sürecinin etik, operasyonel ve hukuki yönleri başta olmak üzere, başarı ve uyum için
-                dikkat edilmesi gereken kritik noktaları tespit eder ve bu doğrultuda hareket eder.</li>
-              <li>Eğitimin katılım, içerik, başarı değerlendirme ve yöntemleri gibi temel idari konular hakkında tam
-                bilgi edinerek eğitimden maksimum fayda sağlayacak şekilde sürece dahil olur.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Dijital Dönüşüm ve Dijital Dönüşüm Olgunluk Seviyesi Değerlendirme <span
-              class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Dijital dönüşümün tanımı, kapsamı, zorunlulukları ve organizasyonlar için yarattığı değer. Dijital
-                dönüşümün gelişim süreci, güncel küresel eğilimler ve geleceğe yönelik öngörüler.</li>
-              <li>İmalat sanayi ve Hizmet sektöründeki KOBİ&#x27;lerin dijital dönüşüm süreçlerinin kritik önemi ve
-                rekabet gücüne etkileri.</li>
-              <li>İşletmelerin dijital dönüşüm olgunluk seviyelerinin ilerlemesinde etkili olan temel iç ve dış
-                faktörlerin analizi.</li>
-              <li>Büyük ölçekli işletmelerin dijital dönüşüm süreçlerini ve olgunluk seviyelerini belirleyen özgün
-                faktörlerin incelenmesi.</li>
-              <li>Dijital dönüşümde, kurumun mevcut durumunun değerlendirilmesi ve dijital süreçlerin detaylı analizinde
-                izlenecek temel adımlar ve yöntemler.</li>
-              <li>Türkiye&#x27;de ve dünyada dijital dönüşüm ve olgunluk seviyesi değerlendirmeye ilişkin mevcut durum
-                ve gelişmeler</li>
-              <li>DDX+ değerlendirme aracının detaylı tanıtımı ve bilimsel/pratik gelişim süreci hakkında bilgilendirme.
-              </li>
-              <li>DDX+ modelini oluşturan ana boyutların ve bunların kapsamlarının analizi.</li>
-              <li>Boyutlar bazında belirlenen seviyeler, her bir seviyenin detaylı açıklamaları ve seviyeler arası geçiş
-                dinamikleri.</li>
-              <li>Ön bilgi formu, araştırma, yetkili görüşmeler ve yerinde ziyaret gibi veri toplama yöntemleri ile bu
-                verilerin sistematik değerlendirme süreci. </li>
-<li>Elde edilen verilerin istatistiksel kümeleme analizleri ve
-                bu analizlerin değerlendirme sürecindeki kullanımı.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Dijital dönüşümün kavramsal çerçevesini, organizasyonlar için yarattığı değeri ve zorunluluklarını tam
-                olarak kavrar.</li>
-              <li>Dijital dönüşümün evrimini, küresel trendlerini ve geleceğe yönelik öngörülerini analiz eder.</li>
-              <li>İmalat ve Hizmet sektörlerindeki KOBİ&#x27;lerin dijital dönüşüm süreçlerinin kritik önemini ve
-                rekabet gücüne etkilerini açıklar.</li>
-              <li>Kurumsal dijital olgunluk seviyelerini ilerletmede etkili olan iç ve dış faktörleri tespit eder ve
-                yorumlar.</li>
-              <li>Büyük ölçekli işletmelerin dijital dönüşüm dinamiklerini ve olgunluk belirleyici faktörlerini inceler.
-              </li>
-              <li>Dijital süreç analizleri ve mevcut durum değerlendirmelerinde izlenecek metodolojik adımları ve
-                yöntemleri öğrenir.</li>
-              <li>Türkiye ve dünya genelindeki olgunluk seviyesi değerlendirme pratikleri ve mevcut durum gelişmelerine
-                ilişkin bilgi sahibi olur.</li>
-              <li>DDX+ değerlendirme aracının detaylarını, bilimsel temelini ve gelişim sürecini kavrar.</li>
-              <li>DDX+ modelinin ana boyutlarını ve bu boyutların kapsamlarını analitik bir yaklaşımla inceler.</li>
-              <li>Boyutlar bazında belirlenen olgunluk seviyeleri, açıklamaları ve seviyeler arası geçiş dinamikleri
-                hakkında bilgi edinir.</li>
-              <li>Ön bilgi formu, görüşme ve ziyaret gibi veri toplama yöntemlerini etkili bir şekilde kullanarak
-                sistematik değerlendirme sürecini uygular.</li>
-              <li>Toplanan veriler üzerinden istatistiksel kümeleme analizlerini gerçekleştirir ve bu analizleri
-                olgunluk değerlendirme raporlarında kullanır.</li>
-            </ul>
-          </div>
-        </div>
-               <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Dijital Dönüşüm Yol Haritası <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Dijital dönüşüm olgunluk seviyesi ile kurumsal dijital dönüşüm yol haritasının stratejik olarak
-                ilişkilendirilmesi ve entegrasyonu.</li>
-              <li>Etkin bir yol haritası oluşturulması sürecinde göz önünde bulundurulması gereken kritik başarı
-                faktörleri ve temel kısıtlamalar.</li>
-              <li>Kurumun özgün yapısına ve ihtiyaçlarına uygun, özelleştirilmiş yol haritası hazırlama yaklaşımlarının
-                incelenmesi.</li>
-              <li>Dijital dönüşüm yol haritasını oluşturan temel boyutlar ve bu boyutların kapsamlı analizi.</li>
-              <li>Yol haritası oluşturma sürecinin ana aşamaları ve metodolojik adımları.</li>
-              <li>Yol haritası hazırlamada kullanılabilecek bütünleşik (entegre) yöntem ve araç setleri.</li>
-              <li>DDX+ modeline özgü yol haritası hazırlama metodolojisi ve uygulama adımları.</li>
-              <li>Şirketin mevcut dijital dönüşüm ve olgunluk seviyesi değerlendirmesi temelinde GİFT (Güçlü Yönler,
-                İyileştirmeye Açık Yönler, Fırsatlar, Tehditler) analizinin yapılması.</li>
-              <li>Şirketin iç ve dış çevre unsurlarının analizi; rekabet dinamikleri ve stratejik önceliklerin bu
-                dinamiklere göre konumlandırılması.</li>
-              <li>DDX+ boyutları ile uyumlu, somut uygulama projelerinin tariflenmesi.</li>
-              <li>Uygulama projelerinin, kurumun spesifik gereksinimlerine göre detaylı olarak tanımlanması ve olgunluk
-                seviyelerine göre sınıflandırılması (seviyelendirilmesi).</li>
-              <li>Uygulama projelerinin, dijital dönüşüm gereklilikleri ve elde edilecek fayda bazında objektif
-                kriterlerle önceliklendirilmesi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Dijital dönüşüm olgunluk seviyesi ile yol haritası arasındaki stratejik bağlantıyı kurar ve bu
-                ilişkiyi yönetimsel kararlara entegre eder.</li>
-              <li>Etkili bir dijital dönüşüm yol haritası hazırlanırken dikkat edilmesi gereken kritik başarı
-                faktörlerini ve temel kısıtlamaları belirler.</li>
-              <li>Kurumun özgün yapısına ve stratejik önceliklerine uygun özelleştirilmiş yol haritası hazırlama
-                yaklaşımlarını geliştirir ve uygular.</li>
-              <li>Dijital dönüşüm yol haritasını oluşturan temel boyutları ve bu boyutların kapsamını analiz eder.</li>
-              <li>Yol haritası oluşturma sürecinin ana aşamalarını ve metodolojik adımlarını kavrar, hazırlık sürecini
-                bu adımlara uygun yönetir.</li>
-              <li>Yol haritası hazırlamada kullanılabilecek bütünleşik yöntem ve araç setlerini kullanır.</li>
-              <li>DDX+ modeline özgü yol haritası hazırlama metodolojisini ve uygulama adımlarını yetkinlikle uygular.
-              </li>
-              <li>Şirketin mevcut dijital olgunluk değerlendirmesine dayanarak GİFT analizini gerçekleştirir ve
-                stratejik sonuçlar çıkarır.</li>
-              <li>Şirketin iç ve dış çevre unsurlarını analiz ederek, rekabet dinamikleri ışığında stratejik öncelikleri
-                doğru şekilde konumlandırır.</li>
-              <li>DDX+ boyutları ile uyumlu, somut uygulama projelerini etkin bir şekilde tarifler.</li>
-              <li>Uygulama projelerini kurumun spesifik gereksinimlerine göre detaylı olarak tanımlar ve olgunluk
-                seviyelerine göre sınıflandırır.</li>
-              <li>Uygulama projelerini, dijital dönüşüm gereklilikleri ve elde edilecek fayda bazında objektif
-                kriterlerle önceliklendirir.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">DDX Portal Eğitimi ve Raporlama Süreci <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>DDX Portal arayüzünün tanıtımı, temel navigasyon ve kullanıcı yetkilendirmelerine ilişkin kapsamlı
-                eğitim.</li>
-              <li>Portal üzerinden dijital dönüşüm raporlarının hazırlanması, veri girişi, şablon kullanımı ve rapor
-                formatlama süreçlerinin teknik ve operasyonel detayları.</li>
-              <li>Raporlama sürecinde standartlara uygunluk, veri doğruluğu ve süreç takibi açısından dikkat edilmesi
-                gereken kritik hususlar ve prosedürler.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>DDX Portal arayüzünü etkin bir şekilde kullanır, temel navigasyon işlemlerini ve kendisine tanımlanan
-                yetkilendirmeleri yönetir.</li>
-              <li>Portal üzerinden dijital dönüşüm raporlarının hazırlanması, veri girişi ve şablon kullanımı gibi
-                teknik detayları uygular.</li>
-              <li>Raporlama sürecinde kalite standartlarına, veri doğruluğuna ve belirlenen prosedürlere uygunluk
-                açısından dikkat edilmesi gereken kritik hususları gözetir.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Vaka Analizi Ön Hazırlık <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Seçilmiş vaka çalışmasına ait video kaydının katılımcılarla paylaşılması.</li>
-              <li>Vaka analizini derinleştirmeye yönelik, katılımcıların yanıtlaması beklenen kritik değerlendirme
-                sorularının sunulması.</li>
-              <li>Katılımcıların, sunulan sorulara ilişkin cevaplarını ve analizlerini desteklemek üzere duydukları ek
-                bilgi ihtiyaçlarını sistematik bir rapor formatında hazırlamaları.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Sunulan vaka çalışması video kaydını izleyerek ilgili kurumun süreç ve sorunlarını tespit eder.</li>
-              <li>Vaka analizini yönlendiren kritik soruları yorumlar ve bu sorulara cevap oluşturabilecek ön analizleri
-                yapar.</li>
-              <li>Kendi cevaplarını ve daha detaylı analiz için gereken ek bilgi ihtiyaçlarını profesyonel bir raporlama
-                düzeninde sistematik olarak ifade eder.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Vaka Analizi Uygulama (1. Grup) <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Seçilen vakanın detaylı tanıtımı, grup çalışmasından beklenen somut çıktılar ve vaka çözüm
-                aşamalarının anlatılması.</li>
-              <li>Bireysel analizleri ve çözüm önerilerini destekleyecek kritik ipuçları ve yönlendirici bilgilerin
-                katılımcılarla paylaşılması.</li>
-              <li>Tanıtımı yapılan vaka çalışmasının belirlenen metodoloji ve zaman çizelgesine uygun olarak
-                katılımcılar tarafından uygulanması ve çözümlenmesi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Sunulan vakanın temel unsurlarını, hedeflenen çıktılarını ve çözüm aşamalarını kavrar.</li>
-              <li>Vaka çalışmasını bireysel olarak analiz ederken paylaşılan kritik ipuçlarını ve yönlendirici bilgileri
-                etkin bir şekilde kullanır.</li>
-              <li>Belirlenen metodolojiye ve zaman çizelgesine uyarak vaka çalışmasını başarıyla uygular ve somut çözüm
-                önerileri geliştirir.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Vaka Analizi Uygulama (2. Grup) <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Seçilen vakanın detaylı tanıtımı, grup çalışmasından beklenen somut çıktıların ve çözüm aşamalarının
-                sunulması.</li>
-              <li>Bireysel analiz ve çözüm geliştirme çalışmalarını destekleyecek kritik ipuçları ve yönlendirici
-                bilgilerin katılımcılarla paylaşılması.</li>
-              <li>Tanıtımı yapılan vaka çalışmasının belirlenen metodoloji ve zaman çizelgesine uygun olarak
-                katılımcılar tarafından uygulanması ve çözümlenmesi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Sunulan vakanın temel unsurlarını, hedeflenen çıktılarını ve çözüm aşamalarını kavrar.</li>
-              <li>Vaka çalışmasını bireysel olarak analiz ederken paylaşılan kritik ipuçlarını ve yönlendirici bilgileri
-                etkin bir şekilde kullanır.</li>
-              <li>Belirlenen metodolojiye ve zaman çizelgesine uyarak, vaka çalışmasını başarıyla uygular ve somut çözüm
-                önerileri geliştirir.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">DDX Danışmanlık Hizmeti Alan / Veren Firma / Danışman Deneyim Paylaşımı
-            <span class="arrow">▶</span>
-          </div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Firmanın sektörü, büyüklüğü, ana faaliyet alanı ve ürün/hizmet yelpazesi hakkında detaylı tanıtımı.
-              </li>
-              <li>Firmanın dijital dönüşüm sürecine başlama nedenleri, mevcut ihtiyaçları ve danışmanlık hizmetinden
-                beklentileri.</li>
-              <li>Firmanın başvuru, ön görüşmeler, veri toplama ve raporlama aşamalarını kapsayan DDX+ sürecinden geçiş
-                deneyiminin aktarılması.</li>
-              <li>DDX+ danışmanlığının firmaya sağladığı somut faydalar ve varsa yararlanılan ilgili teşvik/destek
-                programları.</li>
-              <li>Dijital olgunluk seviyesi değerlendirmesi ve yol haritası sonuçlarından firmanın edindiği kritik
-                çıkarımlar ile gelecek dönem planlamaları.</li>
-              <li>DDX+ danışmanlık sürecinin firma ve danışman bakış açısıyla daha verimli ve etkin geçirilmesine
-                yönelik tavsiye ve öneriler.</li>
-              <li>Sunum sonrası katılımcılardan gelen soruların yanıtlanması ve deneyim alışverişi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>DDX+ danışmanlık hizmeti alan bir firmanın sektör, büyüklük ve ürün yelpazesi gibi temel profil
-                bilgilerini edinir.</li>
-              <li>Firmanın dijital dönüşüm ihtiyacını ve DDX+ hizmetinden beklentilerini gerçek bir örnek üzerinden
-                analiz eder.</li>
-              <li>Bir firmanın DDX+ başvuru, görüşme ve raporlama gibi tüm süreç adımlarını deneyim paylaşımı yoluyla
-                öğrenir.</li>
-              <li>DDX+ danışmanlığının firmalara sağladığı somut faydaları ve teşvik/destek mekanizmalarından yararlanma
-                potansiyelini değerlendirir.</li>
-              <li>Dijital olgunluk raporu ve yol haritasından yola çıkarak firmaların stratejik çıkarımlarını ve
-                geleceğe yönelik planlarını anlar.</li>
-              <li>DDX+ danışmanlık sürecini hem firma hem de danışman perspektifinden daha etkin yönetmeye yönelik
-                pratik tavsiye ve öneriler geliştirir.</li>
-              <li>Soru-cevap bölümü aracılığıyla paylaşılan deneyimler hakkında derinlemesine bilgi edinir ve
-                öğrenilenleri pekiştirir.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Proje Değerleme Yöntemleri <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Proje değerlendirme sürecinin temel gereklilikleri, kriterleri ve dikkate alınması gereken unsurlar.
-              </li>
-              <li>Temel finansal kavramlar: Basit ve bileşik faiz hesaplama prensipleri; etkin (efektif) ve nominal faiz
-                oranları arasındaki farklar.</li>
-              <li>Nakit akışı modellerinde sürekli ve kesikli nakit akışlarının tanımı ve uygulama biçimleri.</li>
-              <li>Kapsamlı Proje/Yatırım Değerleme Yöntemleri: Net Şimdiki Değer (NPV), Net Gelecek Değer (NFV), Eşit
-                Yıllık Maliyet/Gelir (EAC/EAA), İç Verim Oranı (IRR) ve Fayda/Maliyet Oranı (BCR) gibi temel yöntemler.
-              </li>
-              <li>Değerleme yöntemlerinin birbirine göre karşılaştırmalı analizi; her bir yöntemin üstünlükleri ve
-                zayıflıkları.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Proje değerlendirme sürecinin temel gerekliliklerini, kriterlerini ve kritik unsurlarını tanımlar.
-              </li>
-              <li>Basit ve bileşik faiz, etkin ve nominal faiz oranları gibi temel finansal kavramları doğru şekilde
-                hesaplar ve açıklar.</li>
-              <li>Sürekli ve kesikli nakit akışı modellerini ayırt eder ve farklı projelerde uygulama biçimlerini analiz
-                eder.</li>
-              <li>Net Şimdiki Değer (NPV), İç Verim Oranı (IRR) ve Fayda/Maliyet Oranı (BCR) gibi temel proje/yatırım
-                değerlendirme yöntemlerini uygular.</li>
-              <li>Her bir değerlendirme yönteminin üstünlüklerini, zayıflıklarını ve hangi koşullarda daha uygun
-                olduğunu karşılaştırmalı olarak değerlendirir.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Proje Değerleme Yöntemleri <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Proje ve yatırım değerlendirme süreçlerinde amortisman, vergi yükümlülükleri ve enflasyonun nakit
-                akışları üzerindeki etkilerinin analizi.</li>
-              <li>Risk ve belirsizlik faktörlerinin finansal kararlara etkisi; duyarlılık analizi, senaryo analizi gibi
-                risk altında karar kriterlerinin incelenmesi ve karar verme mekanizmalarının yönetimi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Proje ve yatırım değerlendirme süreçlerinde amortisman, vergi ve enflasyon unsurlarının nakit akışları
-                üzerindeki etkilerini hesaplar ve analiz eder.</li>
-              <li>Risk ve belirsizlik altında karar verme prensiplerini kavrar; duyarlılık ve senaryo analizleri gibi
-                karar kriterlerini uygulayarak en uygun yatırım stratejisini belirler.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Proje Değerleme Yöntemleri-Uygulama <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>İmalat sektörüne özgü dijital dönüşüm projeleri ve yatırım kararları için detaylı değerlendirme
-                örneklerinin incelenmesi.</li>
-              <li>Öğrenilen finansal analiz ve proje değerleme yöntemlerinin (NPV, IRR, vb.) imalat sektörü senaryoları
-                üzerinde pratik uygulamaları ve çözümlenmesi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>İmalat sektörüne ait spesifik dijital dönüşüm projelerinin ve yatırım kararlarının değerlendirilmesi
-                için gereken analitik çerçeveyi kurar.</li>
-              <li>Öğrenilen proje değerleme yöntemlerini (NPV, IRR, vb.) kullanarak imalat sektörü senaryoları
-                üzerindeki yatırım kararlarını pratik olarak uygular ve analiz eder.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">Dijital Dönüşüm Teknolojileri <span class="arrow">▶</span></div>
-      <div class="accordion-content">
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Dijital Ekosistemler ve Platformlar 1 <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Dijital ekosistemler, platformlar ve bu alana ait temel kavram ve terminolojinin tanımlanması.</li>
-              <li>Dijital ekosistemlerin tarihsel gelişimi, oluşum mekanizmaları ve güncel trendler (Endüstri
-                1.0&#x27;dan 4.0&#x27;a kadar olan süreç).</li>
-              <li>Bir dijital ekosistemi oluşturan temel unsurlar, aktörler ve aralarındaki etkileşim mekanizmaları.
-              </li>
-              <li>Ürün geliştirme, üretim ve iş süreçleri ekseninde dijital tedarik zinciri kavramları, uygulama
-                araçları, altyapıları ve entegrasyon çözümleri (MES, PDM, PLM, ERP, IoT).</li>
-              <li>Kurum içinde dijital platformların başarılı bir şekilde kurulması ve bu platformlar aracılığıyla
-                ekosistem yönetimi stratejileri.</li>
-              <li>Güncel dijital ekosistem uygulamalarına kapsamlı genel bakış ve tanıtım:</li>
-              <li>-Büyük veri ve Nesnelerin İnterneti (IoT) teknolojileri.</li>
-              <li>-Derin öğrenme, makine öğrenmesi ve yapay zekâ uygulamaları.</li>
-              <li>-Eklemeli imalat teknolojileri.</li>
-              <li>-Endüstriyel robotlar ve robot teknolojileri.</li>
-              <li>-Robotik Süreç Otomasyonu (RPA) çözümleri.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Dijital ekosistemler, platformlar ve temel kavramları doğru bir şekilde tanımlar.</li>
-              <li>Dijital ekosistemlerin tarihsel gelişimini ve Endüstri 4.0 dahil olmak üzere güncel trendleri açıklar.
-              </li>
-              <li>Bir dijital ekosistemi oluşturan temel unsurları ve aktörleri analiz eder.</li>
-              <li>Dijital tedarik zincirindeki ürün, üretim ve iş süreçleri boyutlarını, ilgili uygulama araçları ve
-                entegrasyonlarını (MES, PDM, PLM, ERP, IoT) kavrar.</li>
-              <li>Dijital platform kurma ve bu platformlar üzerinden ekosistem yönetimi stratejilerini öğrenir.</li>
-              <li>Büyük veri, IoT, Yapay Zekâ, Eklemeli İmalat, Endüstriyel Robotlar ve RPA gibi önde gelen dijital
-                ekosistem uygulamalarını tanır ve potansiyellerini değerlendirir.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Dijital Ekosistemler ve Platformlar 2 <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>İmalat sanayinin farklı ölçeklerindeki (KOBİ, büyük işletme) firmalara ait başarılı dijital dönüşüm,
-                platform ve ekosistem uygulama örneklerinin detaylı incelemesi.</li>
-              <li>İmalat sektöründe uygulanan, beklenen başarıyı gösterememiş dijital platform ve ekosistem projelerinin
-                nedenleri ve bu deneyimlerden çıkarılacak derslerin analizi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>İmalat sanayinin farklı ölçeklerindeki (KOBİ ve büyük işletmeler) başarılı dijital platform ve
-                ekosistem uygulama örneklerini analiz eder.</li>
-              <li>İmalat sektöründeki başarısız dijitalleşme projelerinin temel nedenlerini ve kritik hata noktalarını
-                tespit eder.</li>
-              <li>Başarılı ve başarısız uygulama örneklerinden edinilen dersleri, kendi kurumsal dijitalleşme
-                stratejisine entegre eder.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Kurumsal Mimari Yaklaşımının Temelleri <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Kurumsal Mimari (KM) temel kavramları, ana bileşenleri ve bu mimarinin kurumlar, özellikle imalat
-                sanayi çerçevesinde ölçeklendirilmiş önemi ve stratejik değerlendirilmesi.</li>
-              <li>Kurumsal sürekliliğin sağlanması, mimari veri havuzunun yönetimi ve etkin mimari yönetişim
-                prensipleri.</li>
-              <li>KM olgunluk modelleri ve bu modellerin kurumların gelişimindeki rolü.</li>
-              <li>Başlıca Kurumsal Mimari çerçeve yaklaşımları (Zachman Framework, The Open Group Architectural
-                Framework - TOGAF, Federal Enterprise Architecture - FEA, vb.) ve karşılaştırmalı analizi.</li>
-              <li>Dijital Dönüşüm (DD) ihtiyaçlarının, seçilen Kurumsal Mimari çerçevesi dahilinde değerlendirilmesi ve
-                konumlandırılması.</li>
-              <li>Bilişim altyapılarıyla tam entegre, değişimlere hızlı adapte olabilen kurumsal süreçlerin
-                tasarlanması.</li>
-              <li>Mimari değer oluşturma, bu değeri maksimize etme stratejileri ve mimari geliştirme yaşam döngüsü.</li>
-              <li>Türkiye&#x27;de ve dünyada Kurumsal Mimari alanındaki mevcut durum, uygulama örnekleri ve güncel
-                gelişmeler.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>KM temel kavramlarını, bileşenlerini ve özellikle imalat sanayi bağlamındaki stratejik önemini kavrar.
-              </li>
-              <li>Kurumsal süreklilik, mimari veri havuzu yönetimi ve etkin mimari yönetişim prensiplerini öğrenir.</li>
-              <li>Farklı Mimari Olgunluk Modellerini analiz eder ve kurumun mevcut durumunu bu modeller çerçevesinde
-                değerlendirir.</li>
-              <li>Zachman, TOGAF ve FEA gibi başlıca Kurumsal Mimari çerçeve yaklaşımlarını tanır ve karşılaştırmalı
-                olarak değerlendirir.</li>
-              <li>Dijital Dönüşüm (DD) gereksinimlerini KM çerçevesinde analiz ederek doğru şekilde konumlandırır.</li>
-              <li>Bilişim altyapılarıyla entegre ve değişikliklere hızlı cevap verebilen kurumsal süreçleri tasarlama
-                yetkinliği kazanır.</li>
-              <li>Mimari değer oluşturma, bu değeri maksimize etme stratejilerini ve mimari geliştirme yaşam döngüsünü
-                uygular.</li>
-              <li>Türkiye ve dünyadaki Kurumsal Mimari uygulamalarındaki güncel durum ve gelişmeleri takip eder.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Teknoloji Tedarikçisi Uygulamaları
+    <h1>📘 Eğitim Planı</h1>
+    <div class="accordion">
 
+        <div class="accordion-item">
+            <div class="accordion-header">DDX+ Model <span class="arrow">▶</span></div>
+            <div class="accordion-content">
+                
+                <div class="sub-accordion-item">
+                    <div class="sub-accordion-header">DDX+ Süreci Bilgilendirme <span class="arrow">▶</span></div>
+                    <div class="sub-accordion-content">
+                        <p><strong>Kapsam / İçerik:</strong></p>
+                        <ul>
+                            <li>Katılımcıların eğitimi etkin kullanabilmeleri için gerekli olan katılım kuralları, eğitim
+                                içeriklerinin genel akışı, başarı değerlendirme metodolojisi ve kullanılacak eğitim yöntemleri hakkında
+                                kapsamlı bilgilendirme.</li>
+                            <li>DDX+ modelinin sistematik tanımı, temel kapsamı, KOBİ'ler için stratejik önemi, ana bileşenleri
+                                ve yönetimsel prensipleri detaylı bir şekilde incelenmesi.</li>
+                            <li>DDX+ modelinin KOBİ'lerin dijitalleşme sürecine somut katkıları ve bu katkıların sağladığı
+                                sürdürülebilir rekabet avantajı potansiyelinin analizi.</li>
+                            <li>Danışman havuzunun oluşturulma prosedürleri, kriterleri ve genel yapısı hakkında idari bilgilendirme.
+                            </li>
+                            <li>DDX+ çerçevesinde danışmanlık hizmetinin başlangıcından tamamlanmasına kadar olan tüm aşamaları
+                                kapsayan genel süreç ve metodoloji bilgilendirmesi.</li>
+                            <li>Danışmanın sunması beklenen hizmetlerin asgari standartları, operasyonel şartları ve kalite
+                                beklentileri.</li>
+                            <li>Danışmanlık faaliyetinin yürütülmesi sırasında profesyonel uyum, etik ilkeler ve operasyonel başarı
+                                açısından kritik öneme sahip olan kilit dikkat noktaları.</li>
+                        </ul>
+                        <p><strong>Kazanımlar:</strong></p>
+                        <ul>
+                            <li>DDX+ modelinin tanımını, temel bileşenlerini, prensiplerini ve KOBİ'lerin dijital dönüşümündeki
+                                kritik rolünü tam olarak kavrar.</li>
+                            <li>DDX+ modelinin KOBİ'lere sağladığı rekabet avantajını, dijitalleşmeye olan katkısını ve stratejik
+                                önemini açıklar.</li>
+                            <li>Danışman havuzunun oluşturulması ve danışmanlık sürecinin genel işleyişi hakkında detaylı bilgi
+                                edinir.</li>
+                            <li>DDX+ çerçevesinde danışman tarafından sunulması beklenen hizmet standartlarını, şartlarını ve
+                                profesyonel gereklilikleri öğrenir.</li>
+                            <li>Danışmanlık sürecinin etik, operasyonel ve hukuki yönleri başta olmak üzere, başarı ve uyum için
+                                dikkat edilmesi gereken kritik noktaları tespit eder ve bu doğrultuda hareket eder.</li>
+                            <li>Eğitimin katılım, içerik, başarı değerlendirme ve yöntemleri gibi temel idari konular hakkında tam
+                                bilgi edinerek eğitimden maksimum fayda sağlayacak şekilde sürece dahil olur.</li>
+                        </ul>
+                    </div>
+                </div>
 
+                <div class="sub-accordion-item">
+                    <div class="sub-accordion-header">Dijital Dönüşüm ve Dijital Dönüşüm Olgunluk Seviyesi Değerlendirme <span
+                            class="arrow">▶</span></div>
+                    <div class="sub-accordion-content">
+                        <p><strong>Kapsam / İçerik:</strong></p>
+                        <ul>
+                            <li>Dijital dönüşümün tanımı, kapsamı, zorunlulukları ve organizasyonlar için yarattığı değer. Dijital
+                                dönüşümün gelişim süreci, güncel küresel eğilimler ve geleceğe yönelik öngörüler.</li>
+                            <li>İmalat sanayi ve Hizmet sektöründeki KOBİ'lerin dijital dönüşüm süreçlerinin kritik önemi ve
+                                rekabet gücüne etkileri.</li>
+                            <li>İşletmelerin dijital dönüşüm olgunluk seviyelerinin ilerlemesinde etkili olan temel iç ve dış
+                                faktörlerin analizi.</li>
+                            <li>Büyük ölçekli işletmelerin dijital dönüşüm süreçlerini ve olgunluk seviyelerini belirleyen özgün
+                                faktörlerin incelenmesi.</li>
+                            <li>Dijital dönüşümde, kurumun mevcut durumunun değerlendirilmesi ve dijital süreçlerin detaylı analizinde
+                                izlenecek temel adımlar ve yöntemler.</li>
+                            <li>Türkiye'de ve dünyada dijital dönüşüm ve olgunluk seviyesi değerlendirmeye ilişkin mevcut durum
+                                ve gelişmeler</li>
+                            <li>DDX+ değerlendirme aracının detaylı tanıtımı ve bilimsel/pratik gelişim süreci hakkında bilgilendirme.
+                            </li>
+                            <li>DDX+ modelini oluşturan ana boyutların ve bunların kapsamlarının analizi.</li>
+                            <li>Boyutlar bazında belirlenen seviyeler, her bir seviyenin detaylı açıklamaları ve seviyeler arası geçiş
+                                dinamikleri.</li>
+                            <li>Ön bilgi formu, araştırma, yetkili görüşmeler ve yerinde ziyaret gibi veri toplama yöntemleri ile bu
+                                verilerin sistematik değerlendirme süreci. </li>
+                            <li>Elde edilen verilerin istatistiksel kümeleme analizleri ve
+                                bu analizlerin değerlendirme sürecindeki kullanımı.</li>
+                        </ul>
+                        <p><strong>Kazanımlar:</strong></p>
+                        <ul>
+                            <li>Dijital dönüşümün kavramsal çerçevesini, organizasyonlar için yarattığı değeri ve zorunluluklarını tam
+                                olarak kavrar.</li>
+                            <li>Dijital dönüşümün evrimini, küresel trendlerini ve geleceğe yönelik öngörülerini analiz eder.</li>
+                            <li>İmalat ve Hizmet sektörlerindeki KOBİ'lerin dijital dönüşüm süreçlerinin kritik önemini ve
+                                rekabet gücüne etkilerini açıklar.</li>
+                            <li>Kurumsal dijital olgunluk seviyelerini ilerletmede etkili olan iç ve dış faktörleri tespit eder ve
+                                yorumlar.</li>
+                            <li>Büyük ölçekli işletmelerin dijital dönüşüm dinamiklerini ve olgunluk belirleyici faktörlerini inceler.
+                            </li>
+                            <li>Dijital süreç analizleri ve mevcut durum değerlendirmelerinde izlenecek metodolojik adımları ve
+                                yöntemleri öğrenir.</li>
+                            <li>Türkiye ve dünya genelindeki olgunluk seviyesi değerlendirme pratikleri ve mevcut durum gelişmelerine
+                                ilişkin bilgi sahibi olur.</li>
+                            <li>DDX+ değerlendirme aracının detaylarını, bilimsel temelini ve gelişim sürecini kavrar.</li>
+                            <li>DDX+ modelinin ana boyutlarını ve bu boyutların kapsamlarını analitik bir yaklaşımla inceler.</li>
+                            <li>Boyutlar bazında belirlenen olgunluk seviyeleri, açıklamaları ve seviyeler arası geçiş dinamikleri
+                                hakkında bilgi edinir.</li>
+                            <li>Ön bilgi formu, görüşme ve ziyaret gibi veri toplama yöntemlerini etkili bir şekilde kullanarak
+                                sistematik değerlendirme sürecini uygular.</li>
+                            <li>Toplanan veriler üzerinden istatistiksel kümeleme analizlerini gerçekleştirir ve bu analizleri
+                                olgunluk değerlendirme raporlarında kullanır.</li>
+                        </ul>
+                    </div>
+                </div>
 
-            (ERP, PLM, MES) <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Teknoloji tedarikçisi uygulamalarının (ERP, PLM, MES) tarihsel gelişimi, kurumsal etkileri ve güncel
-                trendler (Endüstri 1.0&#x27;dan 4.0&#x27;a kadar).</li>
-              <li>Kurumsal Kaynak Planlama (ERP), Ürün Yaşam Döngüsü Yönetimi (PLM) ve Üretim Yürütme Sistemleri (MES)
-                kavramlarının tanımlanması, imalat sanayi çerçevesinde ölçeklendirilmiş önemi ve stratejik
-                değerlendirilmesi.</li>
-              <li>Bu uygulamaların işletmelerin dijital dönüşüm yolculuğunda çözüm ürettiği boyutlar, sağladığı katma
-                değerler ve temel değer önerileri.</li>
-              <li>İmalat sanayinde faaliyet gösteren firmaların dijital dönüşümünde ERP, MES ve PLM otomasyon
-                uygulamalarının kritik rolü ve önemi.</li>
-              <li>Teknoloji tedarikçisi uygulamalarının, Endüstriyel Nesnelerin İnterneti (IIoT), Büyük Veri, Yapay Zekâ
-                ve Siber Güvenlik gibi dijital dönüşüm teknolojileri ile entegrasyonu ve karşılıklı etkileşimi.</li>
-              <li>Dijital dönüşüm ihtiyaçlarının belirlenmesi ve bu uygulamaların kurumsal sürece entegrasyonunda
-                karşılaşılan temel zorluklar ile bu zorluklara yönelik tavsiye ve öneriler.</li>
-              <li>Konunun pekiştirilmesi amacıyla etkileşimli soru-cevap oturumu.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Teknoloji tedarikçisi uygulamalarının (ERP, PLM, MES) tarihsel gelişimini, etkilerini ve Endüstri 4.0
-                bağlamındaki güncel trendleri açıklar.</li>
-              <li>ERP, PLM ve MES kavramlarının tanımlarını, imalat sanayi çerçevesindeki önemini ve stratejik değerini
-                değerlendirir.</li>
-              <li>Bu uygulamaların işletmelerin dijital dönüşüm yolculuğunda hangi boyutlarda çözümler ürettiğini ve
-                temel değer önermelerini analiz eder.</li>
-              <li>İmalat sanayinde ERP, MES ve PLM otomasyon uygulamalarının kritik rolünü ve önemini belirler.</li>
-              <li>Bu tedarikçi uygulamalarının IIoT, Büyük Veri, Yapay Zekâ ve Siber Güvenlik gibi ileri dijital
-                teknolojilerle entegrasyon ve etkileşimini kavrar.</li>
-              <li>Dijital dönüşüm ihtiyaçlarının belirlenmesi ve teknoloji entegrasyonu süreçlerinde karşılaşılan
-                zorlukları tespit eder, bu zorluklara yönelik çözüm ve tavsiyeler geliştirir.</li>
-              <li>Soru-cevap oturumu aracılığıyla edinilen bilgileri pekiştirir ve uygulama konularında açıklık sağlar.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Firma Deneyim Paylaşımı <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Firmanın sektörel konumu, kurumsal büyüklüğü, ana faaliyet alanı ve ürün/hizmet yelpazesi hakkında
-                detaylı tanıtımı.</li>
-              <li>Firmanın dijitalleşme sürecine başlama motivasyonu, aşamaları ve geçirdiği dönüşüm yolculuğunun genel
-                özeti.</li>
-              <li>Firmada hayata geçirilen Endüstriyel Nesnelerin İnterneti (IIoT), Büyük Veri, YZ ve/veya Siber
-                Güvenlik gibi temel dijital dönüşüm teknolojilerinin örneklerle açıklanması.</li>
-              <li>Dijitalleşmenin firmanın hangi stratejik önceliklerine cevap verdiği, hangi kritik iş ihtiyaçlarına
-                somut çözümler sunduğunun analizi.</li>
-              <li>Dijitalleşme yatırımlarının planlama ve uygulama süreçlerinde karşılaşılan zorluklar, riskler ve bu
-                zorluklara dair tavsiye ve öneriler.</li>
-              <li>Dijital dönüşüm gereksinimlerinin tespit edilmesinde yaşanan zorluklar ve bu aşamaya yönelik pratik
-                tavsiyeler.</li>
-              <li>Dijitalleşme projelerinin hayata geçirilmesi sırasında karşılaşılan teknik ve organizasyonel zorluklar
-                ile çözüm önerileri.</li>
-              <li>Sunum sonrası deneyim paylaşımını derinleştirmek amacıyla soru-cevap oturumu.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Deneyim paylaşımı yapılan firmanın sektör, büyüklük ve ürün yelpazesi gibi kurumsal profilini kavrar.
-              </li>
-              <li>Bir firmanın dijital dönüşüm yolculuğunun temel aşamalarını ve motivasyonlarını gerçek bir örnek
-                üzerinden öğrenir.</li>
-              <li>Firmada uygulanan IIoT, Büyük Veri, YZ ve Siber Güvenlik gibi temel dijital dönüşüm teknolojilerini
-                tanır.</li>
-              <li>Dijitalleşmenin, firmanın hangi stratejik önceliklerine ve iş ihtiyaçlarına somut çözümler getirdiğini
-                analiz eder.</li>
-              <li>Dijitalleşme yatırımlarının planlama ve uygulama süreçlerinde karşılaşılan zorluklar, riskler ve bu
-                zorluklara yönelik tavsiyeler hakkında bilgi edinir.</li>
-              <li>Dijital dönüşüm gereksinimlerinin belirlenmesi ve uygulama (implementasyon) aşamalarındaki zorluklara
-                dair pratik tavsiyeler geliştirir.</li>
-              <li>Soru-cevap oturumu ile paylaşılan kurumsal deneyimi pekiştirir ve uygulama bilgisi kazanır.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Endüstriyel Nesnelerin İnterneti (IoT) <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>IoT ve IIoT temel kavramları, bu teknolojilerin iş süreçlerine katkı sağlayan unsurları ve uygulama
-                alanları.</li>
-              <li>IIoT&#x27;nin tarihsel gelişimi, güncel iş trendleri üzerindeki etkileri ve işletmeler için
-                gelecekteki potansiyel vizyonu.</li>
-              <li>Dijital veri kaynakları, üretim verisinin elde edilme mekanizmaları ve Büyük Veri ile IIoT arasındaki
-                stratejik karar alma ilişkisi.</li>
-              <li>Endüstriyel IIoT mimarisinin temel işlevsel gereklilikleri ve kurumsal süreçlerle entegrasyonu
-                sağlayan bileşenleri.</li>
-              <li>Ürün, üretim ve iş süreçleri ekseninde IIoT teknolojilerinin getirdiği kurumsal faydalar; (önleyici
-                bakım, dijital tedarik zinciri gibi) altyapı ve entegrasyon senaryoları.</li>
-              <li>İmalat sanayinin farklı ölçeklerindeki firmalara ait başarılı ve başarısız IIoT uygulama örneklerinin,
-                iş çıktıları ve stratejik etkileri bağlamında incelenmesi.</li>
-              <li>* Not: Doğrudan haberleşme ve teknik odağı yüksek anlatılmamalı, üretim boyutlarıyla
-                ilişkilendirilerek anlatımı önem arz etmektedir.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>IoT ve IIoT&#x27;nin temel kavramlarını, iş süreçlerine katkı sağlayan unsurlarını ve kurumsal
-                uygulama alanlarını kavrar.</li>
-              <li>IIoT&#x27;nin tarihsel gelişimini, güncel iş trendleri üzerindeki etkilerini ve geleceğe yönelik
-                stratejik potansiyelini analiz eder.</li>
-              <li>Dijital veri kaynaklarını, veri elde etme mekanizmalarını ve Büyük Veri ile IIoT arasındaki stratejik
-                karar alma ilişkisini kurar.</li>
-              <li>Endüstriyel IIoT mimarisinin temel işlevsel gerekliliklerini ve kurumsal süreçlerle entegrasyon
-                bileşenlerini öğrenir.</li>
-              <li>IIoT teknolojilerinin ürün, üretim ve iş süreçleri ekseninde (önleyici bakım, dijital tedarik zinciri
-                vb.) getirdiği somut kurumsal faydaları açıklar.</li>
-              <li>İmalat sanayindeki başarılı ve başarısız IIoT uygulama örneklerini, iş çıktıları ve stratejik etkileri
-                bağlamında karşılaştırmalı olarak inceler.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Büyük Veri ve Yapay Zeka <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Veri madenciliği, derin öğrenme, makine öğrenmesi (ML) ve YZ temel kavramlarının tanımları ve bu
-                kavramlar arasındaki hiyerarşik ve işlevsel ilişkiler.</li>
-              <li>YZ ve Büyük Veri alanlarının tarihsel gelişim süreçleri, güncel küresel eğilimleri ve geleceğe yönelik
-                stratejik öngörüler.</li>
-              <li>İmalat sanayiinde veri madenciliği, derin öğrenme, ML ve YZ&#x27;nin kullanım alanları, karar destek
-                sistemleri (KDS) oluşturulması ve somut uygulama örnekleri.</li>
-              <li>Büyük Veri&#x27;nin imalat sanayiinin dijital dönüşümündeki kritik rolü, stratejik önemi ve yarattığı
-                değer.</li>
-              <li>Veri ve Büyük Veri kavramlarının özellikleri, toplanan verinin kurumsal süreçler için işlenmesi,
-                analiz edilmesi ve anlamlandırılması yöntemleri.</li>
-              <li>YZ&#x27;nin temel prensipleri, imalat ve iş süreçlerinde kullanılan başlıca uygulamaları ve
-                fonksiyonel görevleri.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Veri madenciliği, derin öğrenme, makine öğrenmesi (ML) ve YZ (Yapay Zekâ) temel kavramlarını tanımlar
-                ve aralarındaki işlevsel ilişkileri kavrar.</li>
-              <li>YZ ve Büyük Veri alanlarının tarihsel gelişimini, güncel eğilimlerini ve geleceğe yönelik stratejik
-                öngörülerini analiz eder.</li>
-              <li>İmalat sanayiinde veri madenciliği, derin öğrenme, ML ve YZ&#x27;nin kullanım alanlarını, karar destek
-                sistemleri (KDS) oluşturma örneklerini inceler.</li>
-              <li>Büyük Veri&#x27;nin imalat sanayiinin dijital dönüşümündeki kritik rolünü ve yarattığı stratejik
-                değeri açıklar.</li>
-              <li>Veri ve Büyük Veri kavramlarının özelliklerini, verinin kurumsal süreçler için işlenmesi, analiz
-                edilmesi ve anlamlandırılması yöntemlerini öğrenir.</li>
-              <li>YZ&#x27;nin temel prensiplerini, imalat ve iş süreçlerinde kullanılan başlıca uygulamalarını ve
-                fonksiyonel görevlerini kavrar.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Siber Güvenlik <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Endüstriyel Kontrol Sistemleri (EKS) ve bu sistemlere özgü siber güvenlik kavramları, temel
-                bileşenleri ve terminolojisi.</li>
-              <li>Kurumsal siber güvenlik sistemlerinin genel özellikleri, yapıları ve işlevsel yetkinlikleri.</li>
-              <li>Endüstrileşmenin tarihsel süreçleriyle (Endüstri 1.0, 2.0, 3.0, 4.0) paralel olarak siber güvenlik
-                risklerinin gelişimi, güncel eğilimleri ve geleceğe yönelik öngörüler.</li>
-              <li>Endüstriyel kontrol sistemlerinin siber güvenliğine yönelik olası riskler, tehditler ve bu risklere
-                karşı alınması gereken zorunlu önlemler.</li>
-              <li>Siber güvenlik olaylarına karşı geliştirilen müdahale yaklaşımları ve bu müdahale süreçlerinin
-                yönetimi.</li>
-              <li>İmalat sanayinin farklı ölçeklerindeki (KOBİ, büyük işletme) başarılı ve başarısız siber güvenlik
-                uygulama örneklerinin analizi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>EKS ve siber güvenliğe özgü temel kavramları, bileşenleri ve terminolojiyi tanımlar.</li>
-              <li>Siber güvenlik sistemlerinin genel özelliklerini ve kurumsal yapıdaki işlevsel yetkinliklerini
-                açıklar.</li>
-              <li>Endüstrileşme aşamalarına paralel olarak gelişen siber güvenlik risklerini, güncel eğilimleri ve
-                geleceğe yönelik tehditleri analiz eder.</li>
-              <li>Endüstriyel kontrol sistemlerinin siber güvenliğine yönelik olası riskleri ve tehditleri tespit ederek
-                gerekli önleyici ve koruyucu tedbirleri belirler.</li>
-              <li>Siber güvenlik olaylarına karşı müdahale yaklaşımlarını öğrenir ve bu süreçlerin yönetim ilkelerini
-                kavrar.</li>
-              <li>İmalat sanayindeki başarılı ve başarısız siber güvenlik uygulama örneklerini inceler ve bu
-                deneyimlerden dersler çıkarır.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Firma Deneyim Paylaşımı <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Firmanın sektörel konumu, kurumsal büyüklüğü, ana faaliyet alanı ve ürün/hizmet yelpazesi hakkında
-                detaylı tanıtımı.</li>
-              <li>Firmanın dijitalleşme sürecine başlama motivasyonu, aşamaları ve geçirdiği dönüşüm yolculuğunun genel
-                özeti.</li>
-              <li>Firmada hayata geçirilen IIoT, Büyük Veri, YZ ve/veya Siber Güvenlik gibi temel dijital dönüşüm
-                teknolojilerinin örneklerle açıklanması.</li>
-              <li>Dijitalleşmenin firmanın hangi stratejik önceliklerine cevap verdiği ve hangi kritik iş ihtiyaçlarına
-                somut çözümler sunduğunun analizi.</li>
-              <li>Dijitalleşme yatırımlarının planlama ve uygulama süreçlerinde karşılaşılan zorluklar, riskler ve bu
-                zorluklara dair tavsiye ve öneriler.</li>
-              <li>Dijital dönüşüm gereksinimlerinin tespit edilmesinde yaşanan zorluklar ve bu aşamaya yönelik pratik
-                tavsiyeler.</li>
-              <li>Dijitalleşme projelerinin hayata geçirilmesi sırasında karşılaşılan teknik ve organizasyonel zorluklar
-                ile çözüm önerileri.</li>
-              <li>Sunum sonrası deneyim paylaşımını derinleştirmek amacıyla soru-cevap oturumu.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Deneyim paylaşımı yapılan firmanın sektör, büyüklük ve ürün yelpazesi gibi kurumsal profilini edinir.
-              </li>
-              <li>Bir firmanın dijital dönüşüm yolculuğunun temel aşamalarını ve stratejik motivasyonlarını gerçek bir
-                örnek üzerinden öğrenir.</li>
-              <li>Firmada uygulanan IIoT, Büyük Veri, YZ ve Siber Güvenlik gibi temel dijital dönüşüm teknolojilerini
-                tanır.</li>
-              <li>Dijitalleşmenin, firmanın hangi stratejik önceliklerine ve iş ihtiyaçlarına somut çözümler getirdiğini
-                analiz eder.</li>
-              <li>Dijitalleşme yatırımlarının planlama ve uygulama süreçlerinde karşılaşılan zorluklar, riskler ve bu
-                zorluklara yönelik tavsiyeler hakkında bilgi edinir.</li>
-              <li>Dijital dönüşüm gereksinimlerinin belirlenmesi ve uygulama (implementasyon) aşamalarındaki zorluklara
-                dair pratik tavsiyeler geliştirir.</li>
-              <li>Soru-cevap oturumu ile paylaşılan kurumsal deneyimi pekiştirir ve uygulama bilgisi kazanır.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Dijital İkiz, Simülasyon Sistemleri <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Dijital İkiz (Digital Twin), Simülasyon Sistemleri ve Kestirimci Bakım gibi temel kavramların
-                tanımlanması ve bu kavramlar arasındaki işlevsel ilişkiler.</li>
-              <li>Dijital İkiz ve Simülasyon teknolojilerinin tarihsel gelişim süreci ve evrimi.</li>
-              <li>Fiziksel sistemlerin modellenmesi ve bu modellerin dijital ortama aktarılması (dijitalizasyon)
-                süreçleri.</li>
-              <li>Oluşturulan dijital modellerin performans ve süreç analizi için simülasyonu.</li>
-              <li>Simülasyon sonuçlarının anlaşılırlığını artırmak amacıyla görselleştirme teknikleri.</li>
-              <li>Siber-fiziksel sistemler (CPS) özelinde Dijital İkizlerin oluşturulması ve işlevi.</li>
-              <li>İmalat sanayinde Dijital İkiz ve Simülasyon sistemlerinin başarılı uygulama örnekleri, üretim
-                yönetimine katkıları (Türkiye ve dünyadan güncel istatistikler).</li>
-              <li>Uygulama süreçlerinde karşılaşılan zorluklar, riskler ve bu sorunlara yönelik çözüm önerileri.</li>
-              <li>İmalat sanayinde Dijital İkiz ve Simülasyon sistemleri yatırımı için temel ihtiyaçlar ve
-                gerekliliklerin belirlenmesi.</li>
-              <li>Konuya ilişkin destekleyici ve tamamlayıcı dokümantasyonun sunulması.</li>
-              <li>Sunum sonrası deneyim paylaşımını derinleştirmek amacıyla soru-cevap oturumu.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Dijital İkiz, Simülasyon Sistemleri ve Kestirimci Bakım temel kavramlarını ve aralarındaki işlevsel
-                ilişkileri tanımlar.</li>
-              <li>Bu teknolojilerin tarihsel gelişim sürecini ve kurumsal evrimini açıklar.</li>
-              <li>Fiziksel sistemleri modelleme ve dijital ortama aktarma (dijitalizasyon) süreçlerini kavrar.</li>
-              <li>Oluşturulan dijital modeller üzerinde performans ve süreç analizi için simülasyonları gerçekleştirir.
-              </li>
-              <li>Simülasyon sonuçlarını görselleştirme tekniklerini kullanarak analiz eder.</li>
-              <li>Siber-Fiziksel Sistemler (CPS) için Dijital İkizler oluşturmanın prensiplerini ve işlevlerini öğrenir.
-              </li>
-              <li>İmalat sanayinde Dijital İkiz ve Simülasyon sistemlerinin uygulama örneklerini, üretim yönetimine
-                katkıları bağlamında değerlendirir.</li>
-              <li>Uygulama sırasında karşılaşılan sorunları, riskleri ve bu problemlere yönelik çözüm önerilerini analiz
-                eder.</li>
-              <li>İmalat sanayinde Dijital İkiz ve Simülasyon yatırımları için temel ihtiyaçları ve gereklilikleri
-                belirler.</li>
-              <li>Soru-cevap oturumu ile edinilen bilgileri pekiştirir ve uygulama konularında açıklık sağlar.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">İmalatta AR/VR Uygulamaları <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Artırılmış Gerçeklik (AR), Sanal Gerçeklik (VR) ve Karma Gerçeklik (MR) gibi temel kavramların
-                tanımlanması ve bu teknolojiler arasındaki işlevsel ilişkiler.</li>
-              <li>AR/VR/MR teknolojilerinin temel çalışma prensipleri ve mimarileri.</li>
-              <li>Bu teknolojilerin tarihsel gelişimi ve güncel gelişim süreci.</li>
-              <li>İmalat sanayinde AR/VR uygulama örnekleri: Organizasyonel yapı, müşteri/pazar yönetimi, Ar-Ge/Ür-Ge,
-                tedarik zinciri yönetimi ve üretim yönetimi süreçlerine entegrasyonu (Türkiye ve dünya
-                istatistikleriyle).</li>
-              <li>AR/VR uygulamalarının imalat sektöründe yarattığı somut değer ve katma değer (verimlilik, hata
-                azaltma, eğitim vb.).</li>
-              <li>AR/VR sistemlerindeki en güncel teknolojik trendler ve yenilikler.</li>
-              <li>İmalat sanayinde AR/VR yatırımı için temel ihtiyaçların ve kurumsal gerekliliklerin belirlenmesi.</li>
-              <li>Uygulama (implementasyon) süreçlerinde karşılaşılan zorluklar, riskler ve bu problemlere yönelik çözüm
-                önerileri.</li>
-              <li>Konuya ilişkin destekleyici ve tamamlayıcı dokümantasyonun sunulması.</li>
-              <li>Sunum sonrası deneyim paylaşımını derinleştirmek amacıyla soru-cevap oturumu.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Artırılmış Gerçeklik (AR), Sanal Gerçeklik (VR) ve Karma Gerçeklik (MR) temel kavramlarını ve
-                aralarındaki işlevsel ilişkileri tanımlar.</li>
-              <li>AR/VR/MR teknolojilerinin temel çalışma prensiplerini ve tarihsel gelişimini açıklar.</li>
-              <li>İmalat sanayiinde AR/VR uygulamalarının organizasyon, tedarik zinciri ve üretim yönetimi gibi farklı
-                süreçlerdeki kullanım örneklerini inceler.</li>
-              <li>AR/VR uygulamalarının imalat sektöründe yarattığı somut değeri ve katma değeri (verimlilik, hata
-                azaltma vb.) analiz eder.</li>
-              <li>AR/VR sistemlerindeki en güncel teknolojik trendleri takip eder.</li>
-              <li>İmalat sanayinde AR/VR yatırımı için temel ihtiyaçları ve kurumsal gereklilikleri belirler.</li>
-              <li>Uygulama sırasında karşılaşılan zorlukları, riskleri ve bu problemlere yönelik çözüm önerilerini
-                analiz eder.</li>
-              <li>Soru-cevap oturumu aracılığıyla edinilen bilgileri pekiştirir ve uygulama konularında açıklık sağlar.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Eklemeli İmalat <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Eklemeli İmalat ve Geleneksel/Kesikli İmalat gibi temel kavramların tanımlanması.</li>
-              <li>Eklemeli imalatın diğer imalat türlerinden temel farkları, üstünlükleri ve zayıflıkları ile
-                karşılaştırmalı analizi.</li>
-              <li>Eklemeli imalat teknolojilerinin tarihsel gelişimi ve güncel gelişim süreci.</li>
-              <li>İmalat sanayinde eklemeli imalat uygulama örnekleri, küresel ve Türkiye&#x27;deki güncel
-                istatistiklerle desteklenmesi.</li>
-              <li>İmalat sanayinde prototipleme, düşük adetli üretim, kişiselleştirme ve ağırlık azaltma gibi hangi
-                koşullarda kullanımının stratejik olarak gerekli veya faydalı olduğunun belirlenmesi.</li>
-              <li>Eklemeli imalatta kullanılan polimer, metal gibi ana malzeme türleri ve yaygın kullanılan teknikler.
-              </li>
-              <li>Uygulama süreçlerinde karşılaşılan zorluklar, maliyet engelleri ve bu problemlere yönelik çözüm
-                önerileri.</li>
-              <li>Konuya ilişkin destekleyici ve tamamlayıcı dokümantasyonun sunulması.</li>
-              <li>Sunum sonrası deneyim paylaşımını derinleştirmek amacıyla soru-cevap oturumu.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Eklemeli İmalat ve geleneksel/kesikli imalat gibi temel kavramları tanımlar.</li>
-              <li>Eklemeli imalatın diğer imalat türlerinden temel farklarını ve stratejik üstünlüklerini
-                karşılaştırmalı olarak analiz eder.</li>
-              <li>Eklemeli imalat teknolojilerinin tarihsel gelişimini ve güncel evrimini açıklar.</li>
-              <li>İmalat sanayindeki eklemeli imalat uygulama örneklerini inceler ve küresel/ulusal istatistiklerle
-                değerlendirir.</li>
-              <li>Prototip, düşük adetli üretim, kişiselleştirme ve ağırlık optimizasyonu gibi durumlarda eklemeli
-                imalatın kullanım gerekliliğini/faydasını belirler.</li>
-              <li>Eklemeli imalatta kullanılan polimer ve metal gibi ana malzeme türlerini ve yaygın teknikleri tanır.
-              </li>
-              <li>Uygulama sırasında karşılaşılan zorlukları ve maliyet engellerini analiz ederek çözüm önerileri
-                geliştirir.</li>
-              <li>Soru-cevap oturumu ile edinilen bilgileri pekiştirir.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Yeşil Dijital Dönüşüm <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Yeşil Dijital Dönüşümün temel prensipleri, amacı ve kapsamı.</li>
-              <li>Dijital teknolojilerin çevresel sürdürülebilirliğe katkısı ve bu süreçteki kritik rolü.</li>
-              <li>Sürdürülebilir iş modellerinin oluşturulması ve bu modellerin dijital araçlarla uygulanması.</li>
-              <li>Enerji verimliliği ve etkin enerji yönetim sistemlerinin kurumsal operasyonlarda kurulması.</li>
-              <li>Çevreye duyarlı yazılım ve teknoloji geliştirme yaklaşımları (Green Software/IT).</li>
-              <li>Yeşil Dijital Dönüşüm projelerini destekleyen yasal düzenlemeler ve stratejik çerçeveler.</li>
-              <li>Yeşil teknoloji projelerinin etkin yönetimi, değerlendirilmesi ve finansman kaynaklarının
-                belirlenmesi.</li>
-              <li>Yeşil dijital uygulamalar konusunda çalışanların ve toplumun bilinçlendirilmesi ve eğitimi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Yeşil Dijital Dönüşümün temel prensiplerini, amacını ve kapsamını tanımlar.</li>
-              <li>Dijital teknolojilerin çevresel sürdürülebilirliğe katkı sağlayan rollerini ve mekanizmalarını
-                açıklar.</li>
-              <li>Sürdürülebilir iş modellerini kavrar ve bu modelleri dijital araçlarla uygulamayı hedefler.</li>
-              <li>Kurumsal operasyonlarda enerji verimliliği ve etkin enerji yönetim sistemlerini hayata geçirir.</li>
-              <li>Çevreye duyarlı (Yeşil) yazılım ve teknoloji geliştirme yaklaşımlarını benimser.</li>
-              <li>Yeşil Dijital Dönüşüm projelerini destekleyen yasal ve stratejik çerçeveleri analiz eder.</li>
-              <li>Yeşil teknoloji projelerinin yönetimini ve finansman kaynaklarını belirleme yetkinliği kazanır.</li>
-              <li>Yeşil dijital uygulamalar konusunda çalışanları ve toplumu bilinçlendirme stratejileri geliştirir.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Yalın Dijital Dönüşüm <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Yalın Düşünce felsefesinin temel prensipleri, değer akışı ve israfı önleme yaklaşımları.</li>
-              <li>Yalın Prensipler ile Dijital Dönüşüm teknolojilerinin stratejik entegrasyonu ve bu entegrasyonun
-                kurumsal verimliliğe etkileri.</li>
-              <li>Yalın Dijital Dönüşümü destekleyen teknolojik araçlar ve bu araçların iş süreçlerindeki uygulamaları.
-              </li>
-              <li>Yalın Dijital Dönüşüm sürecinde organizasyonel ve kültürel Değişim Yönetimi stratejileri.</li>
-              <li>Yalın dijital uygulamaların performansını izleme, sürekli iyileştirme (Kaizen) döngülerinin kurulması
-                ve ölçümleme metodolojileri.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Yalın Düşünce felsefesinin temel prensiplerini, değer akışı ve israfı önleme yaklaşımlarını kavrar.
-              </li>
-              <li>Yalın Prensipleri, Dijital Dönüşüm teknolojileriyle stratejik olarak entegre etme becerisi kazanır.
-              </li>
-              <li>Yalın Dijital Dönüşümü destekleyen teknolojik araçları ve bunların iş süreçlerindeki uygulamalarını
-                etkin şekilde kullanır.</li>
-              <li>Yalın Dijital Dönüşüm sürecinde başarılı organizasyonel ve kültürel Değişim Yönetimi stratejileri
-                uygular.</li>
-              <li>Yalın dijital uygulamaların performansını Kaizen döngüleriyle ölçer ve izler.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Firma Deneyim Paylaşımı <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Firmanın sektörel konumu, kurumsal büyüklüğü, ana faaliyet alanı ve ürün/hizmet yelpazesi hakkında
-                detaylı tanıtımı.</li>
-              <li>Firmanın dijitalleşme sürecine başlama motivasyonu, aşamaları ve geçirdiği dönüşüm yolculuğunun genel
-                özeti.</li>
-              <li>Firmada uygulanan Dijital İkiz, Simülasyon Sistemleri, AR/VR uygulamaları ve/veya Eklemeli İmalat gibi
-                ileri dijital dönüşüm teknolojilerinin örneklerle açıklanması.</li>
-              <li>Bu teknoloji yatırımlarının planlama ve uygulama süreçlerinde karşılaşılan zorluklar, riskler ve bu
-                zorluklara dair tavsiye ve öneriler.</li>
-              <li>Sunum sonrası deneyim paylaşımını derinleştirmek amacıyla soru-cevap oturumu.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Deneyim paylaşımı yapılan firmanın sektör, büyüklük ve ürün yelpazesi gibi kurumsal profilini edinir.
-              </li>
-              <li>Bir firmanın dijital dönüşüm yolculuğunun temel aşamalarını ve motivasyonlarını gerçek bir örnek
-                üzerinden öğrenir.</li>
-              <li>Firmada uygulanan Dijital İkiz, Simülasyon Sistemleri, AR/VR uygulamaları ve Eklemeli İmalat gibi
-                ileri dijital teknolojileri tanır.</li>
-              <li>Bu teknoloji yatırımlarının planlama ve uygulama süreçlerinde karşılaşılan zorluklar, riskler ve bu
-                zorluklara yönelik tavsiyeler hakkında bilgi edinir.</li>
-              <li>Soru-cevap oturumu ile paylaşılan kurumsal deneyimi pekiştirir ve uygulama bilgisi kazanır.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Endüstriyel Robotlar <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Otomasyon, robotik, robot anatomisi, robot sistemleri ve temel robot türleri gibi ana kavramların
-                tanımlanması.</li>
-              <li>Endüstriyel robotların temel mekanik, elektronik ve yazılımsal bileşenleri.</li>
-              <li>Robot teknolojilerinin tarihsel gelişimi ve güncel gelişim süreci.</li>
-              <li>Robot dinamiklerinin anlaşılması, kullanılan kontrol araçları ve temel programlama metotları.</li>
-              <li>İmalat sanayinde robot uygulama örnekleri: Organizasyonel yapı, müşteri/pazar yönetimi, Ar-Ge/Ür-Ge,
-                tedarik zinciri ve üretim yönetimi süreçlerine entegrasyonu (Türkiye ve dünya istatistikleriyle).</li>
-              <li>Robot sistemlerinin uygulanmasında karşılaşılan zorluklar, entegrasyon riskleri ve bu problemlere
-                yönelik çözüm önerileri.</li>
-              <li>İmalat sanayinde robot teknolojisi yatırımı için temel ihtiyaçların, kurumsal gerekliliklerin ve
-                yatırım geri dönüşünün (ROI) belirlenmesi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Otomasyon, robotik, robot anatomisi, robot sistemleri ve temel robot türleri gibi ana kavramları
-                tanımlar.</li>
-              <li>Endüstriyel robotların temel bileşenlerini ve tarihsel gelişim sürecini açıklar.</li>
-              <li>Robot dinamiklerini, kullanılan kontrol araçlarını ve temel programlama metotlarını kavrar.</li>
-              <li>İmalat sanayinde robot uygulama örneklerini (üretim yönetimi, tedarik zinciri, Ar-Ge vb.) inceler ve
-                istatistiklerle değerlendirir.</li>
-              <li>Robot sistemlerinin uygulanmasında karşılaşılan zorlukları, entegrasyon risklerini ve bu problemlere
-                yönelik çözüm önerilerini analiz eder.</li>
-              <li>İmalat sanayinde robot teknolojisi yatırımı için temel ihtiyaçları, kurumsal gereklilikleri ve
-                ROI&#x27;yi belirler.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Robotik Süreç Otomasyonu (RPA) <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Robotik Süreç Otomasyonu (RPA) temel kavramlarının, ilgili teknolojilerinin ve çalışma prensiplerinin
-                tanımlanması.</li>
-              <li>RPA&#x27;nın tarihsel gelişim süreci, güncel küresel eğilimleri ve geleceğe yönelik vizyonu.</li>
-              <li>RPA&#x27;nın kurumsal faydaları; müşteri firmaların hangi iş ihtiyaçlarına, stratejik önceliklerine
-                somut çözümler ve katkılar sunduğunun analizi.</li>
-              <li>Piyasada mevcut olan başlıca RPA araçları ve bu araçların sahip olduğu teknik kabiliyetler.</li>
-              <li>RPA projeleri için hazırlık, pilot uygulama ve yaygınlaştırma aşamalarını içeren uygulama planı
-                adımları.</li>
-              <li>Kurumların otomasyon olgunluk düzeyleri ve RPA&#x27;nın bu düzeyleri yükseltmedeki rolü.</li>
-              <li>İmalat sanayinde RPA&#x27;nın uygulama örnekleri (Türkiye ve dünyadan güncel istatistiklerle).</li>
-              <li>RPA uygulamalarında karşılaşılan zorluklar (entegrasyon, süreç seçimi vb.) ve bu problemlere yönelik
-                çözüm önerileri.</li>
-              <li>İmalat sanayinde RPA yatırımı için temel ihtiyaçların, kurumsal gerekliliklerin ve ROI belirlenmesi.
-              </li>
-              <li>İmalat sanayinin farklı ölçeklerindeki (KOBİ, büyük işletme) başarılı ve başarısız RPA uygulama
-                örneklerinin karşılaştırmalı analizi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>RPA&#x27;nın temel kavramlarını, teknolojilerini ve çalışma prensiplerini tanımlar.</li>
-              <li>RPA&#x27;nın tarihsel gelişimini, güncel trendlerini ve geleceğe yönelik kurumsal potansiyelini analiz
-                eder.</li>
-              <li>RPA&#x27;nın kurumsal faydalarını, stratejik önceliklere katkısını ve somut çözüm alanlarını
-                değerlendirir.</li>
-              <li>Piyasada mevcut olan başlıca RPA araçlarını ve bunların teknik kabiliyetlerini tanır.</li>
-              <li>RPA projeleri için uygulama planını (hazırlık, pilot, yaygınlaştırma) oluşturur.</li>
-              <li>Kurumların otomasyon olgunluk düzeylerini değerlendirir ve RPA&#x27;nın rolünü belirler.</li>
-              <li>İmalat sanayindeki RPA uygulama örneklerini inceler ve istatistiklerle değerlendirir.</li>
-              <li>RPA uygulamalarında karşılaşılan zorlukları analiz eder ve bunlara yönelik çözüm önerileri geliştirir.
-              </li>
-              <li>İmalat sanayinde RPA yatırımı için temel ihtiyaçları, gereklilikleri ve ROI&#x27;yi belirler.</li>
-              <li>İmalat sanayinin farklı ölçeklerindeki başarılı ve başarısız RPA uygulama örneklerinden dersler
-                çıkarır.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Değerlendirme ve Model Vakası <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Gerçekleştirilen eğitim modüllerinin genel bir değerlendirmesi ve her bir eğitimin süresinin (saat
-                bazında) özetlenmesi.</li>
-              <li>Uygulamalı çalışma için belirlenen Model Vaka (Case Study) senaryosunun detaylı olarak açıklanması.
-              </li>
-              <li>Katılımcılardan beklenen analiz raporunun içeriği, formatı ve teslim tarihleri dahil olmak üzere
-                detaylı bilgilendirilmesi.</li>
-              <li>Eğitim, model vaka ve beklenen teslimatlar hakkında katılımcıların sorularını yanıtlamak üzere
-                soru-cevap oturumu.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Eğitimin genel kapsamını, modüllerini ve her bir konuya ayrılan süreyi özetleyerek kazanılan bilgiyi
-                bütüncül bir şekilde değerlendirir.</li>
-              <li>Sunulan Model Vaka senaryosunu analiz eder ve öğrendiği bilgileri gerçek bir iş problemine uygulamaya
-                hazırlar.</li>
-              <li>Model vakaya yönelik beklenen analiz raporunun formatını, içeriğini ve teslim tarihlerini doğru
-                şekilde kavrar.</li>
-              <li>Eğitim, model vaka veya teslimatlar hakkında sahip olduğu belirsizlikleri soru-cevap oturumu
-                aracılığıyla netleştirir.</li>
-              <li>Tüm eğitim konularını kapsayan uygulamalı bir çalışma (model vaka) ile öğrenilen bilgileri sentezleme
-                ve pratik beceri kazanma fırsatı bulur.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">Dijital Teknolojiler <span class="arrow">▶</span></div>
-      <div class="accordion-content">
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">DDX Danışmanlarıyla Dijital Dönüşüm Deneyimleri <span class="arrow">▶</span>
-          </div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>DDX danışmanlarının, farklı sektörlerdeki dijital dönüşüm süreçlerinde edindikleri saha deneyimlerinin
-                ve birikimlerinin paylaşılması.</li>
-              <li>Dijital olgunluk analizi, yol haritası oluşturma ve teknoloji entegrasyonu aşamalarından somut
-                uygulama örneklerinin sunulması.</li>
-              <li>Dijital dönüşüm projelerinin yürütülmesi sırasında karşılaşılan kurumsal, teknik ve finansal zorluklar
-                ile bu zorluklara yönelik geliştirilen pratik çözümlerin aktarılması.</li>
-              <li>Çeşitli sektörlerden (imalat, hizmet vb.) alınan gerçek vaka çalışmalarının ve bu vakaların DDX+ modeli
-                çerçevesindeki sonuçlarının paylaşılması.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>DDX danışmanlarının farklı sektörlerdeki dijital dönüşüm süreçlerinde edindiği pratik saha
-                deneyimlerini öğrenir.</li>
-              <li>Dijital olgunluk analizi ve yol haritası oluşturma süreçlerinden elde edilen somut uygulama
-                örneklerini analiz eder.</li>
-              <li>Dijital dönüşüm projelerinde karşılaşılan kurumsal, teknik ve finansal zorlukları ve bu zorlukları
-                aşmak için uygulanan çözüm stratejilerini kavrar.</li>
-              <li>Çeşitli sektörlerden paylaşılan gerçek vaka çalışmaları üzerinden, DDX+ modelinin pratik sonuçlarını ve
-                etkilerini değerlendirir.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Dijital Teknoloji Trendleri ve Standartları 1 <span class="arrow">▶</span>
-          </div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Dijital teknoloji trendlerinin güncel durumu, yönü ve imalat sanayi için potansiyel fırsatları.</li>
-              <li>Dijitalleşme süreçlerinde benimsenmesi gereken uluslararası standartlar ve bu standartlara uyumun
-                yasal ve operasyonel gereklilikleri.</li>
-              <li>Yeni ve gelişmekte olan dijital teknolojilerin imalat sanayinin üretim, ürün ve iş modelleri
-                üzerindeki öngörülen etkileri.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Dijital teknoloji trendlerinin güncel durumunu, gelişim yönünü ve imalat sanayi için potansiyel
-                fırsatlarını analiz eder.</li>
-              <li>Dijitalleşmede kullanılan uluslararası standartları ve bu standartlara uyumun yasal ve operasyonel
-                gerekliliklerini açıklar.</li>
-              <li>Yeni ve gelişmekte olan dijital teknolojilerin imalat sanayinin üretim, ürün ve iş modelleri
-                üzerindeki etkilerini öngörür.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Dijital Teknoloji Trendleri ve Standartları 2 <span class="arrow">▶</span>
-          </div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Dijital Dönüşümü destekleyen temel standartlar.</li>
-              <li>Dijital teknoloji standartlarının ulusal ve uluslararası boyutları ve bu boyutların karşılaştırmalı
-                analizi.</li>
-              <li>Endüstri 4.0 çerçevesinde benimsenen ve dijitalleşmeyi yönlendiren özel standartlar.</li>
-              <li>Standartlara uyumun dijital dönüşüm projelerinin başarısı, entegrasyonu ve sürdürülebilirliği
-                üzerindeki etkisi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Dijital Dönüşümü destekleyen temel standartları tanımlar.</li>
-              <li>Dijital teknoloji standartlarının ulusal ve uluslararası boyutlarını ve bu boyutların karşılaştırmalı
-                analizini yapar.</li>
-              <li>Endüstri 4.0 çerçevesinde benimsenen ve dijitalleşmeyi yönlendiren özel standartları öğrenir.</li>
-              <li>Standartlara uyumun dijital dönüşüm projelerinin başarısı, entegrasyonu ve sürdürülebilirliği
-                üzerindeki kritik etkisini açıklar.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Yapay Zeka Destekli Tasarım Odaklı Düşünme <span class="arrow">▶</span>
-          </div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>YZ ve Tasarım Odaklı Düşünme temel kavramlarının tanımlanması ve felsefelerinin açıklanması.</li>
-              <li>YZ algoritmalarının kullanıldığı tasarım süreçleri, bu süreçleri destekleyen yazılımsal araçlar ve
-                platformlar.</li>
-              <li>Tasarım odaklı düşünmenin, karmaşık problemlerin tanımlanması ve yaratıcı çözümlerin
-                geliştirilmesindeki kritik rolü ve metodolojisi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>YZ ve Tasarım Odaklı Düşünme temel kavramlarını ve felsefelerini kavrar.</li>
-              <li>YZ algoritmalarının kullanıldığı tasarım süreçlerini, ilgili araçları ve platformları açıklar.</li>
-              <li>Tasarım odaklı düşünme metodolojisini, karmaşık problem çözme ve yaratıcı çözüm geliştirme süreçlerine
-                uygular.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Dijital Dönüşüm Ekseninde Sürdürülebilirlik <span class="arrow">▶</span>
-          </div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Dijital dönüşüm ile sürdürülebilirlik kavramlarının stratejik ilişkisi ve bu ilişkinin kurumsal önemi.
-              </li>
-              <li>Sürdürülebilirliğin çevresel, ekonomik ve sosyal olmak üzere üç temel boyutu ve bu boyutların
-                dijitalleşme ile nasıl desteklendiği.</li>
-              <li>Çevresel fayda sağlayan Yeşil Dijital Dönüşüm uygulamaları ve farklı sektörlerden somut örnekler.</li>
-              <li>Sürdürülebilir iş modellerinin oluşturulması ve bu modellerin hayata geçirilmesinde dijital
-                teknolojilerin oynadığı kritik rol.</li>
-              <li>Kurumsal Karbon Ayak İzi&#x27;nin azaltılmasına yönelik dijitalleşme stratejileri ve uygulamaları.
-              </li>
-              <li>Sürdürülebilirlik ve dijital dönüşüm alanındaki yasal düzenlemeler ve stratejik çerçevelere uyumluluk
-                gereklilikleri.</li>
-              <li>Sürdürülebilirlik performansını artırmak için kullanılan dijital araçların (sensörler, analiz
-                platformları vb.) etkin kullanımı ve yönetimi.ların kullanımı ve yönetimi</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Dijital dönüşüm ile sürdürülebilirlik arasındaki stratejik ilişkiyi ve bu ilişkinin kurumsal önemini
-                kavrar.</li>
-              <li>Sürdürülebilirliğin çevresel, ekonomik ve sosyal boyutlarını dijitalleşme bağlamında analiz eder.</li>
-              <li>Yeşil Dijital Dönüşüm uygulamalarını ve bu uygulamaların çevresel faydalarını somut örneklerle
-                açıklar.</li>
-              <li>Sürdürülebilir iş modelleri geliştirmede dijital teknolojilerin rolünü belirler.</li>
-              <li>Karbon Ayak İzi&#x27;ni azaltmaya yönelik dijitalleşme stratejilerini ve uygulamalarını uygular.</li>
-              <li>Sürdürülebilirlik ve dijital dönüşüm alanındaki yasal ve stratejik çerçevelere uyum gerekliliklerini
-                öğrenir.</li>
-              <li>Sürdürülebilirlik performansını artırmak için kullanılan dijital araçları etkin şekilde kullanır ve
-                yönetir.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Değişim Yönetimi <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Değişim Yönetiminin temel kavramları, kurumsal dönüşüm süreçlerindeki kritik önemi ve işlevleri.</li>
-              <li>Değişim süreçlerinin başarılı bir şekilde planlanması, organize edilmesi ve uygulama aşamalarının
-                yönetimi.</li>
-              <li>Kurumsal direncin kaynakları, çalışanların değişime karşı sergilediği tutumlar ve bu direnci yönetme
-                stratejileri.</li>
-              <li>Değişim sürecinde şeffaf ve etkili iletişim stratejilerinin oluşturulması ve liderliğin değişimdeki
-                kritik rolü.</li>
-              <li>Değişim esnasında çalışan motivasyonunun yüksek tutulması ve sürecin başarısı için aktif katılımın
-                sağlanması yöntemleri.</li>
-              <li>Değişim sürecinde sıkça karşılaşılan organizasyonel ve kültürel zorluklar ile bu zorluklara yönelik
-                pratik çözüm yöntemleri.</li>
-              <li>Değişimin etkilerini izlemek için ölçümleme, değerlendirme ve sürekli geri bildirim mekanizmalarının
-                kurulması.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Değişim Yönetiminin temel kavramlarını, önemini ve kurumsal dönüşümdeki işlevlerini tanımlar.</li>
-              <li>Değişim süreçlerini başarılı bir şekilde planlama, organize etme ve uygulama becerisi kazanır.</li>
-              <li>Kurumsal direncin kaynaklarını ve çalışanların değişime karşı tutumlarını yönetme stratejilerini
-                uygular.</li>
-              <li>Değişim sürecinde şeffaf iletişim stratejileri oluşturur ve liderlik rolünü etkin kullanır.</li>
-              <li>Çalışan motivasyonunu artırma ve sürece aktif katılımı sağlama yöntemlerini hayata geçirir.</li>
-              <li>Değişim sürecinde karşılaşılan organizasyonel ve kültürel zorlukları tespit eder ve çözüm yöntemleri
-                geliştirir.</li>
-              <li>Değişimin etkilerini ölçümlemek için geri bildirim ve performans değerlendirme mekanizmalarını kurar.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Veri Analitiği ve İş Zekası <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Kurumsal süreçlerden veri toplama ve analize hazırlık için gerekli olan ön işleme adımları.</li>
-              <li>Veri Temizleme, Dönüştürme ve Yükleme (ETL) süreçlerinin teknikleri ve veri kalitesini sağlama
-                yöntemleri.</li>
-              <li>Etkin veri analizi için gerekli olan veri modelleme prensipleri ve analitik altyapıların kurulması.
-              </li>
-              <li>İş Zekâsı (BI) platformlarının temel mimarisi ve bileşenleri.</li>
-              <li>Operasyonel ve stratejik karar alma süreçlerini destekleyen raporlama sistemlerinin tasarımı.</li>
-              <li>Anahtar Performans Göstergelerinin (KPI) takibi ve veriye dayalı karar almayı kolaylaştıran
-                etkileşimli Dashboard tasarımı.</li>
-              <li>Çevrimiçi Analitik İşleme (OLAP) sistemlerinin yapısı ve Büyük Veri yönetimi için veri ambarı mimarileri.</li>
-              <li>Kurum içinde veriye dayalı, analitik bir karar verme kültürü oluşturma stratejileri.</li>
-              <li>Veri analitiğinde etik konular, veri güvenliği, anonimleştirme ve KVKK/GDPR gibi yasal uyumluluk
-                gereklilikleri.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Veri toplama ve analize hazırlık için gerekli ön işleme adımlarını uygular.</li>
-              <li>Veri Temizleme, Dönüştürme ve Yükleme (ETL) tekniklerini kullanarak veri kalitesini sağlar.</li>
-              <li>Etkin veri analizi için veri modelleme prensiplerini ve analitik altyapıları kurar.</li>
-              <li>İş Zekâsı (BI) platformlarının temel mimarisini ve bileşenlerini açıklar.</li>
-              <li>Operasyonel ve stratejik karar alma süreçlerini destekleyen raporlama sistemleri tasarlar.</li>
-              <li>Anahtar Performans Göstergelerinin (KPI) takibini sağlayacak etkileşimli Dashboard&#x27;lar tasarlar.
-              </li>
-              <li>Çevrimiçi Analitik İşleme (OLAP) sistemlerinin yapısını ve veri ambarı mimarilerini açıklar.</li>
-              <li>Kurum içinde veriye dayalı analitik bir karar verme kültürü oluşturma stratejileri geliştirir.</li>
-              <li>Veri analitiğinde etik, güvenlik ve KVKK/GDPR gibi yasal uyumluluk gerekliliklerini yerine getirir.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">Danışmanlık Becerileri <span class="arrow">▶</span></div>
-      <div class="accordion-content">
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Hikaye Anlatıcılığı ve Sunum <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Hikaye anlatıcılığının temel prensipleri, amacı ve dinleyici üzerindeki psikolojik etkisi.</li>
-              <li>İmalat sanayinde danışmanlık sürecinde, verinin ve çözüm önerilerinin ikna edici biçimde sunulmasında
-                hikaye anlatıcılığının rolü.</li>
-              <li>Etkili hikaye anlatıcılığı teknikleri (ark, karakter, çatışma, çözüm) ve bu teknikleri destekleyen
-                araçlar.</li>
-              <li>Danışmanın kendi deneyim ve vaka çalışmalarını içeren kişisel hikaye kütüphanesi oluşturma yöntemleri.
-              </li>
-              <li>Verilmek istenen ana mesajı, dinleyicinin zihninde kalıcı kılacak etkili iletme teknikleri.</li>
-              <li>Dinleyicinin dikkatini sürekli yüksek tutmayı sağlayan etkileşimli ve dinamik sunum teknikleri.</li>
-              <li>Sunum sırasında sesin tonu, hızı ve vurgusu gibi ses kontrolü unsurlarının etkili kullanımı.</li>
-              <li>Sahne kullanımı, göz teması ve jestler dahil olmak üzere etkili duruş teknikleri ve beden dilinin
-                gücü.</li>
-              <li>Etkili sunumların görsel tasarımı (uygun renk paletleri, yazı tipi seçimi, fon kullanımı, sayfa
-                düzeni, görsel-yazı dengesi).</li>
-              <li>Sunumların hazırlanmasında kullanılan dijital araçlar ve platformlar (örneğin, Canva).</li>
-              <li>Başarılı bir sunum için gerekli olan hazırlık süreci adımları ve prova teknikleri.</li>
-              <li>Sunum sonunda etkileşimi artırmak amacıyla soru-cevap oturumunun yönetimi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Hikaye anlatıcılığının temel prensiplerini ve dinleyici üzerindeki etkisini kavrar.</li>
-              <li>İmalat sanayindeki danışmanlık süreçlerinde veriyi ve çözüm önerilerini ikna edici biçimde sunmak için
-                hikaye anlatıcılığını kullanır.</li>
-              <li>Etkili hikaye anlatıcılığı tekniklerini ve bu teknikleri destekleyen araçları uygular.</li>
-              <li>Kendi deneyim ve vaka çalışmalarını içeren kişisel hikaye kütüphanesi oluşturur.</li>
-              <li>Verilmek istenen ana mesajı, dinleyicinin zihninde kalıcı kılacak etkili iletme tekniklerini kullanır.
-              </li>
-              <li>Dinleyicinin dikkatini sürekli yüksek tutmayı sağlayan dinamik sunum tekniklerini uygular.</li>
-              <li>Sunum sırasında ses kontrolü unsurlarını (ton, hız, vurgu) ve etkili duruş tekniklerini/beden dilini
-                doğru kullanır.</li>
-              <li>Etkili sunumların görsel tasarımı için renk, yazı tipi, sayfa yapısı ve görsel-yazı uyumu
-                prensiplerini uygular.</li>
-              <li>Sunum hazırlığı sürecini başarılı bir şekilde yönetir ve prova tekniklerini kullanır.</li>
-              <li>Sunum sonrası soru-cevap oturumunu etkin bir şekilde yöneterek etkileşimi artırır.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sub-accordion-item">
-          <div class="sub-accordion-header">Vakalarla Danışmanlık İletişimi <span class="arrow">▶</span></div>
-          <div class="sub-accordion-content">
-            <p><strong>Kapsam / İçerik:</strong></p>
-            <ul>
-              <li>Danışmanlık sürecinde başarılı işbirliği için kritik olan iletişim ve ilişki yönetimi becerileri.</li>
-              <li>Danışman-müşteri ilişkisinde güven inşa etmenin temeli olarak empati yeteneğinin geliştirilmesi.</li>
-              <li>Müşteri ihtiyaçlarını ve sorunlarını doğru anlamak için etkili ve aktif dinleme teknikleri.</li>
-              <li>Doğru bilgiye ulaşmayı sağlayan, yönlendirici olmayan ve açık uçlu soru sorma yöntemleri.</li>
-              <li>Mesajın doğru anlaşılması için açık, net ve amaca yönelik konuşma prensipleri.</li>
-              <li>Gelişimi destekleyen yapıcı geri bildirim alma ve verme teknikleri.</li>
-              <li>İkna edicilik ve etki yaratmada sözün (dilin) doğru ve güçlü kullanımının önemi.</li>
-              <li>İletişimin sözel olmayan boyutu olan beden dilinin doğru okunması ve etkili kullanımı.</li>
-              <li>Yetişkin öğrenme prensipleri ve yetişkin eğitimi yöntemlerinin danışmanlık sürecine adaptasyonu.</li>
-              <li>Değişim süreçlerinde danışmanın rolü ve bu süreçleri kolaylaştıran değişim yönetimi yaklaşımları.</li>
-              <li>Danışman-müşteri etkileşiminde profesyonel iletişim stratejileri.</li>
-              <li>Baskı altında profesyonelliği sürdürmek için duygusal dayanıklılığın artırılması.</li>
-              <li>İmalat sanayine özgü gerçek vaka çalışmaları üzerinden iletişim becerilerinin uygulamalı olarak
-                pekiştirilmesi.</li>
-            </ul>
-            <p><strong>Kazanımlar:</strong></p>
-            <ul>
-              <li>Danışmanlık sürecinde iletişim ve ilişki yönetimi becerilerini etkin kullanır.</li>
-              <li>Müşteri ilişkilerinde güven inşa etmek için empati yeteneğini geliştirir.</li>
-              <li>Müşteri ihtiyaçlarını doğru anlamak için etkili ve aktif dinleme tekniklerini uygular.</li>
-              <li>Doğru bilgiye ulaşmak amacıyla açık ve net soru sorma yöntemlerini kullanır.</li>
-              <li>Mesajını açık ve net konuşma prensipleriyle doğru ve amaç odaklı iletir.</li>
-              <li>Gelişimi desteklemek için yapıcı geri bildirim alma ve verme tekniklerini kullanır.</li>
-              <li>İkna edicilikte sözün gücünü ve iletişimde beden dilinin önemini kavrar ve uygular.</li>
-              <li>Yetişkin eğitimi prensiplerini danışmanlık sürecine adapte eder.</li>
-              <li>Değişim yönetimi yaklaşımlarını kullanarak değişim süreçlerini kolaylaştırır.</li>
-              <li>Danışman-müşteri etkileşiminde profesyonel iletişim stratejileri geliştirir.</li>
-              <li>Baskı altında profesyonelliği sürdürmek için duygusal dayanıklılığını artırır.</li>
-              <li>İmalat sanayine özgü vaka çalışmaları üzerinden iletişim becerilerini uygulamalı olarak pekiştirir.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script>
-    document.querySelectorAll('.accordion-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const item = header.parentElement;
-        item.classList.toggle('open');
-      });
-    });
-    document.querySelectorAll('.sub-accordion-header').forEach(header => {
-      header.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const item = header.parentElement;
-        item.classList.toggle('open');
-      });
-    });
-  </script>
-</body>
+                <div class="sub-accordion-item">
+                    <div class="sub-accordion-header">Dijital Dönüşüm Yol Haritası <span class="arrow">▶</span></div>
+                    <div class="sub-accordion-content">
+                        <p><strong>Kapsam / İçerik:</strong></p>
+                        <ul>
+                            <li>Dijital dönüşüm olgunluk seviyesi ile kurumsal dijital dönüşüm yol haritasının stratejik olarak
+                                ilişkilendirilmesi ve entegrasyonu.</li>
+                            <li>Etkin bir yol haritası oluşturulması sürecinde göz önünde bulundurulması gereken kritik başarı
+                                faktörleri ve temel kısıtlamalar.</li>
+                            <li>Kurumun özgün yapısına ve ihtiyaçlarına uygun, özelleştirilmiş yol haritası hazırlama yaklaşımlarının
+                                incelenmesi.</li>
+                            <li>Dijital dönüşüm yol haritasını oluşturan temel boyutlar ve bu boyutların kapsamlı analizi.</li>
+                            <li>Yol haritası oluşturma sürecinin ana aşamaları ve metodolojik adımları.</li>
+                            <li>Yol haritası hazırlamada kullanılabilecek bütünleşik (entegre) yöntem ve araç setleri.</li>
+                            <li>DDX+ modeline özgü yol haritası hazırlama metodolojisi ve uygulama adımları.</li>
+                            <li>Şirketin mevcut dijital dönüşüm ve olgunluk seviyesi değerlendirmesi temelinde GİFT (Güçlü Yönler,
+                                İyileştirmeye Açık Yönler, Fırsatlar, Tehditler) analizinin yapılması.</li>
+                            <li>Şirketin iç ve dış çevre unsurlarının analizi; rekabet dinamikleri ve stratejik önceliklerin bu
+                                dinamiklere göre konumlandırılması.</li>
+                            <li>DDX+ boyutları ile uyumlu, somut uygulama projelerinin tariflenmesi.</li>
+                            <li>Uygulama projelerinin, kurumun spesifik gereksinimlerine göre detaylı olarak tanımlanması ve olgunluk
+                                seviyelerine göre sınıflandırılması (seviyelendirilmesi).</li>
+                            <li>Uygulama projelerinin, dijital dönüşüm gereklilikleri ve elde edilecek fayda bazında objektif
+                                kriterlerle önceliklendirilmesi.</li>
+                        </ul>
+                        <p><strong>Kazanımlar:</strong></p>
+                        <ul>
+                            <li>Dijital dönüşüm olgunluk seviyesi ile yol haritası arasındaki stratejik bağlantıyı kurar ve bu
+                                ilişkiyi yönetimsel kararlara entegre eder.</li>
+                            <li>Etkili bir dijital dönüşüm yol haritası hazırlanırken dikkat edilmesi gereken kritik başarı
+                                faktörlerini ve temel kısıtlamaları belirler.</li>
+                            <li>Kurumun özgün yapısına ve stratejik önceliklerine uygun özelleştirilmiş yol haritası hazırlama
+                                yaklaşımlarını geliştirir ve uygular.</li>
+                            <li>Dijital dönüşüm yol haritasını oluşturan temel boyutları ve bu boyutların kapsamını analiz eder.</li>
+                            <li>Yol haritası oluşturma sürecinin ana aşamalarını ve metodolojik adımlarını kavrar, hazırlık sürecini
+                                bu adımlara uygun yönetir.</li>
+                            <li>Yol haritası hazırlamada kullanılabilecek bütünleşik yöntem ve araç setlerini kullanır.</li>
+                            <li>DDX+ modeline özgü yol haritası hazırlama metodolojisini ve uygulama adımlarını yetkinlikle uygular.
+                            </li>
+                            <li>Şirketin mevcut dijital olgunluk değerlendirmesine dayanarak GİFT analizini gerçekleştirir ve
+                                stratejik sonuçlar çıkarır.</li>
+                            <li>Şirketin iç ve dış çevre unsurlarını analiz ederek, rekabet dinamikleri ışığında stratejik öncelikleri
+                                doğru şekilde konumlandırır.</li>
+                            <li>DDX+ boyutları ile uyumlu, somut uygulama projelerini etkin bir şekilde tarifler.</li>
+                            <li>Uygulama projelerini kurumun spesifik gereksinimlerine göre detaylı olarak tanımlar ve olgunluk
+                                seviyelerine göre sınıflandırır.</li>
+                            <li>Uygulama projelerini, dijital dönüşüm gereklilikleri ve elde edilecek fayda bazında objektif
+                                kriterlerle önceliklendirir.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="sub-accordion-item">
+                    <div class="sub-accordion-header">DDX Portal Eğitimi ve Raporlama Süreci <span class="arrow">▶</span></div>
+                    <div class="sub-accordion-content">
+                        <p><strong>Kapsam / İçerik:</strong></p>
+                        <ul>
+                            <li>DDX Portal arayüzünün tanıtımı, temel navigasyon ve kullanıcı yetkilendirmelerine ilişkin kapsamlı
+                                eğitim.</li>
+                            <li>Portal üzerinden dijital dönüşüm raporlarının hazırlanması, veri girişi, şablon kullanımı ve rapor
+                                formatlama süreçlerinin teknik ve operasyonel detayları.</li>
+                            <li>Raporlama sürecinde standartlara uygunluk, veri doğruluğu ve süreç takibi açısından dikkat edilmesi
+                                gereken kritik hususlar ve prosedürler.</li>
+                        </ul>
+                        <p><strong>Kazanımlar:</strong></p>
+                        <ul>
+                            <li>DDX Portal arayüzünü etkin bir şekilde kullanır, temel navigasyon işlemlerini ve kendisine tanımlanan
+                                yetkilendirmeleri yönetir.</li>
+                            <li>Portal üzerinden dijital dönüşüm raporlarının hazırlanması, veri girişi ve şablon kullanımı gibi
+                                teknik detayları uygular.</li>
+                            <li>Raporlama sürecinde kalite standartlarına, veri doğruluğuna ve belirlenen prosedürlere uygunluk
+                                açısından dikkat edilmesi gereken kritik hususları gözetir.</li>
+                        </ul>
+                    </div>
+                </div>
 
-</html>
+                <div class="sub-accordion-item">
+                    <div class="sub-accordion-header">Vaka Analizi Ön Hazırlık <span class="arrow">▶</span></div>
+                    <div class="sub-accordion-content">
+                        <p><strong>Kapsam / İçerik:</strong></p>
+                        <ul>
+                            <li>Seçilmiş vaka çalışmasına ait video kaydının katılımcılarla paylaşılması.</li>
+                            <li>Vaka analizini derinleştirmeye yönelik, katılımcıların yanıtlaması beklenen kritik değerlendirme
+                                sorularının sunulması.</li>
+                            <li>Katılımcıların, sunulan sorulara ilişkin cevaplarını ve analizlerini desteklemek üzere duydukları ek
+                                bilgi ihtiyaçlarını sistematik bir rapor formatında hazırlamaları.</li>
+                        </ul>
+                        <p><strong>Kazanımlar:</strong></p>
+                        <ul>
+                            <li>Sunulan vaka çalışması video kaydını izleyerek ilgili kurumun süreç ve sorunlarını tespit eder.</li>
+                            <li>Vaka analizini yönlendiren kritik soruları yorumlar ve bu sorulara cevap oluşturabilecek ön analizleri
+                                yapar.</li>
+                            <li>Kendi cevaplarını ve daha detaylı analiz için gereken ek bilgi ihtiyaçlarını profesyonel bir raporlama
+                                düzeninde sistematik olarak ifade eder.</li>
+                        </ul>
+                    </div>
+                </div>
 
+                <div class="sub-accordion-item">
+                    <div class="sub-accordion-header">Vaka Analizi Uygulama (1. Grup) <span class="arrow">▶</span></div>
+                    <div class="sub-accordion-content">
+                        <p><strong>Kapsam / İçerik:</strong></p>
+                        <ul>
+                            <li>Seçilen vakanın detaylı tanıtımı, grup çalışmasından beklenen somut çıktılar ve vaka çözüm
+                                aşamalarının anlatılması.</li>
+                            <li>Bireysel analizleri ve çözüm önerilerini destekleyecek kritik ipuçları ve yönlendirici bilgilerin
+                                katılımcılarla paylaşılması.</li>
+                            <li>Tanıtımı yapılan vaka çalışmasının belirlenen metodoloji ve zaman çizelgesine uygun olarak
+                                katılımcılar tarafından uygulanması ve çözümlenmesi.</li>
+                        </ul>
+                        <p><strong>Kazanımlar:</strong></p>
+                        <ul>
+                            <li>Sunulan vakanın temel unsurlarını, hedeflenen çıktılarını ve çözüm aşamalarını kavrar.</li>
+                            <li>Vaka çalışmasını bireysel olarak analiz ederken paylaşılan kritik ipuçlarını ve yönlendirici bilgileri
+                                etkin bir şekilde kullanır.</li>
+                            <li>Belirlenen metodolojiye ve zaman çizelgesine uyarak vaka çalışmasını başarıyla uygular ve somut çözüm
+                                önerileri geliştirir.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sub-accordion-item">
+                    <div class="sub-accordion-header">Vaka Analizi Uygulama (2. Grup) <span class="arrow">▶</span></div>
+                    <div class="sub-accordion-content">
+                        <p><strong>Kapsam / İçerik:</strong></p>
+                        <ul>
+                            <li>Seçilen vakanın detaylı tanıtımı, grup çalışmasından beklenen somut çıktıların ve çözüm aşamalarının
+                                sunulması.</li>
+                            <li>Bireysel analiz ve çözüm geliştirme çalışmalarını destekleyecek kritik ipuçları ve yönlendirici
+                                bilgilerin katılımcılarla paylaşılması.</li>
+                            <li>Tanıtımı yapılan vaka çalışmasının belirlenen metodoloji ve zaman çizelgesine uygun olarak
+                                katılımcılar tarafından uygulanması ve çözümlenmesi.</li>
+                        </ul>
+                        <p><strong>Kazanımlar:</strong></p>
+                        <ul>
+                            <li>Sunulan vakanın temel unsurlarını, hedeflenen çıktılarını ve çözüm aşamalarını kavrar.</li>
+                            <li>Vaka çalışmasını bireysel olarak analiz ederken paylaşılan kritik ipuçlarını ve yönlendirici bilgileri
+                                etkin bir şekilde kullanır.</li>
+                            <li>Belirlenen metodolojiye ve zaman çizelgesine uyarak, vaka çalışmasını başarıyla uygular ve somut çözüm
+                                önerileri geliştirir.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sub-accordion-item">
+                    <div class="sub-accordion-header">DDX Danışmanlık Hizmeti Alan / Veren Firma / Danışman Deneyim Paylaşımı
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="sub-accordion-content">
+                        <p><strong>Kapsam / İçerik:</strong></p>
+                        <ul>
+                            <li>Firmanın sektörü, büyüklüğü, ana faaliyet alanı ve ürün/hizmet yelpazesi hakkında detaylı tanıtımı.
+                            </li>
+                            <li>Firmanın dijital dönüşüm sürecine başlama nedenleri, mevcut ihtiyaçları ve danışmanlık hizmetinden
+                                beklentileri.</li>
+                            <li>Firmanın başvuru, ön görüşmeler, veri toplama ve raporlama aşamalarını kapsayan DDX+ sürecinden geçiş
+                                deneyiminin aktarılması.</li>
+                            <li>DDX+ danışmanlığının firmaya sağladığı somut faydalar ve varsa yararlanılan ilgili teşvik/destek
+                                programları.</li>
+                            <li>Dijital olgunluk seviyesi değerlendirmesi ve yol haritası sonuçlarından firmanın edindiği kritik
+                                çıkarımlar ile gelecek dönem planlamaları.</li>
+                            <li>DDX+ danışmanlık sürecinin firma ve danışman bakış açısıyla daha verimli ve etkin geçirilmesine
+                                yönelik tavsiye ve öneriler.</li>
+                            <li>Sunum sonrası katılımcılardan gelen soruların yanıtlanması ve deneyim alışverişi.</li>
+                        </ul>
+                        <p><strong>Kazanımlar:</strong></p>
+                        <ul>
+                            <li>DDX+ danışmanlık hizmeti alan bir firmanın sektör, büyüklük ve ürün yelpazesi gibi temel profil
+                                bilgilerini edinir.</li>
+                            <li>Firmanın dijital dönüşüm ihtiyacını ve DDX+ hizmetinden beklentilerini gerçek bir örnek üzerinden
+                                analiz eder.</li>
+                            <li>Bir firmanın DDX+ başvuru, görüşme ve raporlama gibi tüm süreç adımlarını deneyim paylaşımı yoluyla
+                                öğrenir.</li>
+                            <li>DDX+ danışmanlığının firmalara sağladığı somut faydaları ve teşvik/destek mekanizmalarından yararlanma
+                                potansiyelini değerlendirir.</li>
+                            <li>Dijital olgunluk raporu ve yol haritasından yola çıkarak firmaların stratejik çıkarımlarını ve
+                                geleceğe yönelik planlarını anlar.</li>
+                            <li>DDX+ danışmanlık sürecini hem firma hem de danışman perspektifinden daha etkin yönetmeye yönelik
+                                pratik tavsiye ve öneriler geliştirir.</li>
+                            <li>Soru-cevap bölümü aracılığıyla paylaşılan deneyimler hakkında derinlemesine bilgi edinir ve
+                                öğrenilenleri pekiştirir.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sub-accordion-item">
+                    <div class="sub-accordion-header">Proje Değerleme Yöntemleri <span class="arrow">▶</span></div>
+                    <div class="sub-accordion-content">
+                        <p><strong>Kapsam / İçerik:</strong></p>
+                        <ul>
+                            <li>Proje değerlendirme sürecinin temel gereklilikleri, kriterleri ve dikkate alınması gereken unsurlar.
+                            </li>
+                            <li>Temel finansal kavramlar: Basit ve bileşik faiz hesaplama prensipleri; etkin (efektif) ve nominal faiz
+                                oranları arasındaki farklar.</li>
+                            <li>Nakit akışı modellerinde sürekli ve kesikli nakit akışlarının tanımı ve uygulama biçimleri.</li>
+                            <li>Kapsamlı Proje/Yatırım Değerleme Yöntemleri: Net Şimdiki Değer (NPV), Net Gelecek Değer (NFV), Eşit
+                                Yıllık Maliyet/Gelir (EAC/EAA), İç Verim Oranı (IRR) ve Fayda/Maliyet Oranı (BCR) gibi temel yöntemler.
+                            </li>
+                            <li>Değerleme yöntemlerinin birbirine göre karşılaştırmalı analizi; her bir yöntemin üstünlükleri ve
+                                zayıflıkları.</li>
+                        </ul>
+                        <p><strong>Kazanımlar:</strong></p>
+                        <ul>
+                            <li>Proje değerlendirme sürecinin temel gerekliliklerini, kriterlerini ve kritik unsurlarını tanımlar.
+                            </li>
+                            <li>Basit ve bileşik faiz, etkin ve nominal faiz oranları gibi temel finansal kavramları doğru şekilde
+                                hesaplar ve açıklar.</li>
+                            <li>Sürekli ve kesikli nakit akışı modellerini ayırt eder ve farklı projelerde uygulama biçimlerini analiz
+                                eder.</li>
+                            <li>Net Şimdiki Değer (NPV), İç Verim Oranı (IRR) ve Fayda/Maliyet Oranı (BCR) gibi temel proje/yatırım
+                                değerlendirme yöntemlerini uygular.</li>
+                            <li>Her bir değerlendirme yönteminin üstünlüklerini, zayıflıklarını ve hangi koşullarda daha uygun
+                                olduğunu karşılaştırmalı olarak değerlendirir.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sub-accordion-item">
+                    <div class="sub-accordion-header">Proje Değerleme Yöntemleri (Risk ve Belirsizlik) <span class="arrow">▶</span></div>
+                    <div class="sub-accordion-content">
+                        <p><strong>Kapsam / İçerik:</strong></p>
+                        <ul>
+                            <li>Proje ve yatırım değerlendirme süreçlerinde amortisman, vergi yükümlülükleri ve enflasyonun nakit
+                                akışları üzerindeki etkilerinin analizi.</li>
+                            <li>Risk ve belirsizlik faktörlerinin finansal kararlara etkisi; duyarlılık analizi, senaryo analizi gibi
+                                risk altında karar kriterlerinin incelenmesi ve karar verme mekanizmalarının yönetimi.</li>
+                        </ul>
+                        <p><strong>Kazanımlar:</strong></p>
+                        <ul>
+                            <li>Proje ve yatırım değerlendirme süreçlerinde amortisman, vergi ve enflasyon unsurlarının nakit akışları
+                                üzerindeki etkilerini hesaplar ve analiz eder.</li>
+                            <li>Risk ve belirsizlik altında karar verme prensiplerini kavrar; duyarlılık ve senaryo analizleri gibi
+                                karar kriterlerini uygulayarak en uygun yatırım stratejisini belirler.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="sub-accordion-item">
+                    <div class="sub-accordion-header">Proje Değerleme Yöntemleri-Uygulama <span class="arrow">▶</span></div>
+                    <div class="sub-accordion-content">
+                        <p><strong>Kapsam / İçerik:</strong></p>
+                        <ul>
+                            <li>İmalat sektörüne özgü dijital dönüşüm projeleri ve yatırım kararları için detaylı değerlendirme
+                                örneklerinin incelenmesi.</li>
+                            <li>Öğrenilen finansal analiz ve proje değerleme yöntemlerinin (NPV, IRR, vb.) imalat sektörü senaryoları
+                                üzerinde pratik uygulamaları ve çözümlenmesi.</li>
+                        </ul>
+                        <p><strong>Kazanımlar:</strong></p>
+                        <ul>
+                            <li>İmalat sektörüne ait spesifik dijital dönüşüm projelerinin ve yatırım kararlarının değerlendirilmesi
+                                için gereken analitik çerçeveyi kurar.</li>
+                            <li>Öğrenilen proje değerleme yöntemlerini (NPV, IRR, vb.) kullanarak imalat sektörü senaryoları
+                                üzerindeki yatırım kararlarını pratik olarak uygular ve analiz eder.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header">Dijital Dönüşüm Teknolojileri <span class="arrow">▶</span></div>
+            <div class="accordion-content">
+
+                <div class="sub-accordion-item">
+                    <div class="sub-accordion-header">Dijital Ekosistemler ve Platformlar 1 <span class="arrow">▶</span></div>
+                    <div class="sub-accordion-content">
+                        <p><strong>Kapsam / İçerik:</strong></p>
+                        <ul>
+                            <li>Dijital ekosistemler, platformlar ve bu alana ait temel kavram ve terminolojinin tanımlanması.</li>
+                            <li>Dijital ekosistemlerin tarihsel gelişimi, oluşum mekanizmaları ve güncel trendler (Endüstri
+                                1.0'dan 4.0'a kadar olan süreç).</li>
+                            <li>Bir dijital ekosistemi oluşturan temel unsurlar, aktörler ve aralarındaki etkileşim mekanizmaları.
+                            </li>
+                            <li>Ürün geliştirme, üretim ve iş süreçleri ekseninde dijital tedarik zinciri kavramları, uygulama
+                                araçları, altyapıları ve entegrasyon çözümleri (MES, PDM, PLM, ERP, IoT).</li>
+                            <li>Kurum içinde dijital platformların başarılı bir şekilde kurulması ve bu platformlar aracılığıyla
+                                ekosistem yönetimi stratejileri.</li>
+                            <li>Güncel dijital ekosistem uygulamalarına kapsamlı genel bakış ve tanıtım:</li>
+                            <li>-Büyük veri ve Nesnelerin İnterneti (IoT) teknolojileri.</li>
+                            <li>-Derin öğrenme, makine öğrenmesi ve yapay zekâ uygulamaları.</li>
+                            <li>-Eklemeli imalat teknolojileri.</li>
+                            <li>-Endüstriyel robotlar ve robot teknolojileri.</li>
+                            <li>-Robotik Süreç Otomasyonu (RPA) çözümleri.</li>
+                        </ul>
+                        <p><strong>Kazanımlar:</strong></p>
+                        <ul>
+                            <li>Dijital ekosistemler, platformlar ve temel kavramları doğru bir şekilde tanımlar.</li>
+                            <li>Dijital ekosistemlerin tarihsel gelişimini ve Endüstri 4.0 dahil olmak üzere güncel trendleri açıklar.
+                            </li>
+                            <li>Bir dijital ekosistemi oluşturan temel unsurları ve aktörleri analiz eder.</li>
+                            <li>Dijital tedarik zincirindeki ürün, üretim ve iş süreçleri boyutlarını, ilgili uygulama
